@@ -12,7 +12,7 @@ Welcome to my portfolio. I specialize in Unity game development.
 
 Tensio is a cutting-edge physics solution powered by the Burst Compiler.
 
-* **Documentation:** [Online Doc](https://app.gitbook.com/o/9yq6xmC3R6LnrjjgcBY5/s/KJBLcxtnfeykF0HPy5wb/)
+* **Documentation:** [Online Doc](https://fuzzy-logic-labs.gitbook.io/tensio-documentation/)
 * **Support:** [devbayk@gmail.com](mailto:devbayk@gmail.com)
 
 ## 📫 Contact
