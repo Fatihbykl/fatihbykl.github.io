@@ -16,6 +16,6 @@ Tensio is a cutting-edge physics solution powered by the Burst Compiler.
 * **Support:** [devbayk@gmail.com](mailto:devbayk@gmail.com)
 
 ## 📫 Contact
-* **Email:** [devbayk@gmail.com](mailto:devbayk@gmail.comm)
+* **Email:** [devbayk@gmail.com](mailto:devbayk@gmail.com)
 * **LinkedIn:** [https://www.linkedin.com/in/mfbaykal/](https://www.linkedin.com/in/mfbaykal/)
 * **GitHub:** [https://github.com/fatihbykl](https://github.com/fatihbykl)
