@@ -1,0 +1,24 @@
+---
+import Default from '@astrojs/starlight/components/Pagination.astro';
+
+const { pagination } = Astro.locals.starlightRoute;
+const pathname = Astro.url.pathname;
+
+// Detect which tool's documentation is currently being viewed dynamically
+const match = pathname.match(/\/docs\/([^/]+)/);
+const activeTool = match ? match[1] : '';
+
+
+if (activeTool && pagination) {
+  // Prevent previous link from leading into another tool's docs
+  if (pagination.prev && !pagination.prev.href.includes(`/docs/${activeTool}`)) {
+    Astro.locals.starlightRoute.pagination.prev = undefined;
+  }
+  // Prevent next link from leading into another tool's docs
+  if (pagination.next && !pagination.next.href.includes(`/docs/${activeTool}`)) {
+    Astro.locals.starlightRoute.pagination.next = undefined;
+  }
+}
+---
+
+<Default><slot /></Default>

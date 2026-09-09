@@ -1,0 +1,38 @@
+---
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+
+const { sidebar } = Astro.locals.starlightRoute;
+const pathname = Astro.url.pathname;
+
+// Detect which tool's documentation is currently being viewed dynamically
+const match = pathname.match(/\/docs\/([^/]+)/);
+const activeTool = match ? match[1] : '';
+
+
+function entryMatchesTool(entry: any, tool: string): boolean {
+  if (entry.type === 'link') {
+    return entry.href && entry.href.includes(`/docs/${tool}`);
+  }
+  if (entry.type === 'group' && Array.isArray(entry.entries)) {
+    return entry.entries.some((sub: any) => entryMatchesTool(sub, tool));
+  }
+  return false;
+}
+
+if (activeTool && Array.isArray(sidebar)) {
+  // Keep navigation links (Back to Publisher / Portfolio) + ONLY the current tool's documentation group
+  Astro.locals.starlightRoute.sidebar = sidebar.filter((entry) => {
+    // Keep top-level back links
+    if (entry.type === 'link' && (!entry.href.includes('/docs/') || entry.href.includes(`/docs/${activeTool}`))) {
+      return true;
+    }
+    // Filter groups: only keep the group corresponding to the active tool
+    if (entry.type === 'group') {
+      return entryMatchesTool(entry, activeTool);
+    }
+    return false;
+  });
+}
+---
+
+<Default><slot /></Default>

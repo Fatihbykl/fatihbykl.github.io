@@ -1,0 +1,85 @@
+---
+import { contactLinks } from "../i18n/data";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class="border-t border-neutral-800/80 bg-[#0a0a0a] text-neutral-400 py-10 mt-16"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Col 1: Bio -->
+      <div class="md:col-span-2 space-y-3">
+        <div
+          class="flex items-center gap-2 text-neutral-100 font-semibold text-sm"
+        >
+          <span class="w-2 h-2 rounded-full bg-neutral-400"></span>
+          <span>FATIH // GAME & TOOL DEVELOPER</span>
+        </div>
+        <p class="text-xs text-neutral-400 max-w-md leading-relaxed">
+          Software engineer and Unity game developer building high-performance
+          games and developer tooling.
+        </p>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="space-y-2.5">
+        <h4
+          class="text-xs font-mono uppercase tracking-wider text-neutral-300 font-semibold"
+        >
+          Navigation
+        </h4>
+        <ul class="space-y-1.5 text-xs">
+          {
+            contactLinks.navigation.map((item) => (
+              <li>
+                <a href={item.href} class="hover:text-white transition-colors">
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Col 3: Ecosystem -->
+      <div class="space-y-2.5">
+        <h4
+          class="text-xs font-mono uppercase tracking-wider text-neutral-300 font-semibold"
+        >
+          Ecosystem
+        </h4>
+        <ul class="space-y-1.5 text-xs">
+          {
+            contactLinks.ecosystem.map((item) => (
+              <li>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-white transition-colors flex items-center gap-1.5"
+                >
+                  <span>{item.label}</span>
+                  <svg
+                    class="w-3 h-3 opacity-60"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </>
+                  </svg>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

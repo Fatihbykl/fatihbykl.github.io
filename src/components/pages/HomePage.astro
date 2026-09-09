@@ -1,0 +1,291 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ToolCard from "../ToolCard.astro";
+import { tools, contactLinks } from "../../i18n/data";
+
+const allTools = tools;
+---
+
+<MainLayout>
+  <!-- 1. Top Section: Who I Am, What I Do, Core Stack & Connect (Compact, Aligned with max-w-7xl) -->
+  <section
+    id="about"
+    class="pt-10 pb-12 sm:pt-12 sm:pb-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <!-- Left Column: Bio & Contact (7 cols) -->
+      <div class="lg:col-span-7 space-y-5">
+        <div class="space-y-3">
+          <div
+            class="text-xs font-mono uppercase tracking-wider text-blue-400 font-semibold"
+          >
+            Computer Engineer
+          </div>
+
+          <h1
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.15]"
+          >
+            Fatih Baykal // Game & Tool Developer
+          </h1>
+
+          <p
+            class="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal max-w-2xl"
+          >
+            Software engineer dedicated to building gameplay systems, custom
+            Unity editor tools. Focused on optimizing developer workflows,
+            crafting robust architectures, and delivering reliable tools for
+            creators.
+          </p>
+        </div>
+
+        <!-- Contact & Social Links in a Compact Row -->
+        <div class="pt-1">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <!-- Email (Primary White CTA) -->
+            <a
+              href={`mailto:${contactLinks.personal.email}`}
+              class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-md bg-white hover:bg-neutral-100 text-neutral-950 transition-all duration-200 shadow-sm hover:-translate-y-0.5 active:translate-y-0"
+            >
+              <svg
+                class="w-3.5 h-3.5 text-neutral-950"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Email Me</span>
+            </a>
+
+            <!-- LinkedIn (Brand Blue #0A66C2) -->
+            <a
+              href={contactLinks.personal.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-md bg-[#0A66C2] hover:bg-[#084e96] text-white transition-all duration-200 shadow-sm shadow-[#0A66C2]/30 hover:-translate-y-0.5 active:translate-y-0"
+              title="LinkedIn"
+            >
+              <svg
+                class="w-3.5 h-3.5 fill-current text-white"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66.92 0 1.66-.74 1.66-1.66 0-.92-.74-1.66-1.66-1.66Z"
+                ></path>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- GitHub (Brand Dark #24292F) -->
+            <a
+              href={contactLinks.personal.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-md bg-[#24292F] hover:bg-[#1b1f23] text-white border border-neutral-700/80 transition-all duration-200 shadow-sm shadow-black/40 hover:-translate-y-0.5 active:translate-y-0"
+              title="GitHub"
+            >
+              <svg
+                class="w-3.5 h-3.5 fill-current text-white"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                ></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <!-- Itch.io (Brand Coral/Red #FA5C5C) -->
+            <a
+              href={contactLinks.personal.itchio}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-md bg-[#FA5C5C] hover:bg-[#e04b4b] text-white transition-all duration-200 shadow-sm shadow-[#FA5C5C]/30 hover:-translate-y-0.5 active:translate-y-0"
+              title="Itch.io"
+            >
+              <svg
+                class="w-3.5 h-3.5 fill-current text-white"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M2.5 5.5A2.5 2.5 0 0 1 5 3h14a2.5 2.5 0 0 1 2.5 2.5v1.2a2.5 2.5 0 0 1-1.3 2.2 2.5 2.5 0 0 1 1.3 2.2v5.4a4.5 4.5 0 0 1-4.5 4.5h-10A4.5 4.5 0 0 1 2.5 16.5V11.1a2.5 2.5 0 0 1 1.3-2.2A2.5 2.5 0 0 1 2.5 6.7V5.5zm6.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm6 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM9 15.5a3 3 0 0 0 6 0H9z"
+                ></path>
+              </svg>
+              <span>Itch.io</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Core Stack Box (5 cols) - Clean, Compact, Structured -->
+      <div class="lg:col-span-5">
+        <div
+          class="rounded-xl border border-neutral-800/90 bg-neutral-950/80 p-5 sm:p-6 space-y-4"
+        >
+          <div
+            class="flex items-center justify-between border-b border-neutral-800/80 pb-3"
+          >
+            <span
+              class="text-xs font-mono uppercase tracking-wider text-neutral-300 font-semibold"
+              >Core Focus & Stack</span
+            >
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            {
+              [
+                "Unity Engine",
+                "C# Programming",
+                "Tool Development",
+                "Game Design",
+                "System Architecture",
+              ].map((skill) => (
+                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-neutral-900/80 text-neutral-200 border border-neutral-800/80 hover:border-neutral-600 transition-colors">
+                  {skill}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Showreel / Video Showcase Section -->
+  <section
+    id="showreel"
+    class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-neutral-800/80"
+  >
+    <div class="mb-8 max-w-2xl">
+      <span
+        class="text-xs font-mono uppercase tracking-wider text-blue-400 font-semibold"
+        >Gameplay Showcase</span
+      >
+      <h2
+        class="text-2xl sm:text-3xl font-bold text-white mt-1.5 tracking-tight"
+      >
+        Showreel & Gameplay Highlights
+      </h2>
+    </div>
+
+    <!-- Responsive Video Container -->
+    <div
+      class="relative tech-card rounded-xl overflow-hidden aspect-video w-full max-w-5xl mx-auto bg-neutral-950 border border-neutral-800 shadow-2xl"
+    >
+      <video
+        class="w-full h-full object-cover"
+        controls
+        playsinline
+        preload="metadata"
+      >
+        <source src="/videos/trailer.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- High-Impact Prominent Itch.io Showcase Banner (Integrated directly under Showreel) -->
+    <div
+      class="relative mt-8 max-w-5xl mx-auto rounded-2xl border-2 border-[#fa5c5c]/40 hover:border-[#fa5c5c]/70 bg-gradient-to-br from-[#fa5c5c]/15 via-neutral-950 to-neutral-950 p-6 sm:p-8 overflow-hidden shadow-2xl shadow-[#fa5c5c]/15 backdrop-blur-md transition-all duration-300 group"
+    >
+      <!-- Ambient Decorative Glows -->
+      <div
+        class="absolute -top-16 -left-16 w-72 h-72 bg-[#fa5c5c]/20 rounded-full blur-3xl pointer-events-none"
+      >
+      </div>
+      <div
+        class="absolute -bottom-16 -right-16 w-72 h-72 bg-blue-600/15 rounded-full blur-3xl pointer-events-none"
+      >
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8"
+      >
+        <!-- Left Side: Vibrant Icon + Heading + Description + Badges -->
+        <div class="flex items-start gap-4 sm:gap-6 max-w-2xl">
+          <!-- Big Glowing Itch.io Brand Icon Box -->
+          <div
+            class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#fa5c5c] to-[#c93030] text-white flex items-center justify-center shrink-0 shadow-xl shadow-[#fa5c5c]/40 group-hover:scale-105 group-hover:rotate-1 transition-all duration-300"
+          >
+            <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M2.5 5.5A2.5 2.5 0 0 1 5 3h14a2.5 2.5 0 0 1 2.5 2.5v1.2a2.5 2.5 0 0 1-1.3 2.2 2.5 2.5 0 0 1 1.3 2.2v5.4a4.5 4.5 0 0 1-4.5 4.5h-10A4.5 4.5 0 0 1 2.5 16.5V11.1a2.5 2.5 0 0 1 1.3-2.2A2.5 2.5 0 0 1 2.5 6.7V5.5zm6.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm6 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM9 15.5a3 3 0 0 0 6 0H9z"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="space-y-2.5">
+            <h3
+              class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug"
+            >
+              Try on Itch.io
+            </h3>
+
+            <p
+              class="text-xs sm:text-sm text-neutral-200 leading-relaxed font-normal"
+            >
+              You can find the games in the video and my other games on itch.io.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side: Bold, Prominent CTA Button -->
+        <div class="shrink-0 w-full lg:w-auto">
+          <a
+            href={contactLinks.personal.itchio}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full lg:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 text-sm sm:text-base font-bold rounded-xl bg-[#fa5c5c] hover:bg-[#e04b4b] text-white transition-all duration-200 shadow-2xl shadow-[#fa5c5c]/40 hover:shadow-[#fa5c5c]/60 hover:-translate-y-1 active:translate-y-0 group/btn"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M2.5 5.5A2.5 2.5 0 0 1 5 3h14a2.5 2.5 0 0 1 2.5 2.5v1.2a2.5 2.5 0 0 1-1.3 2.2 2.5 2.5 0 0 1 1.3 2.2v5.4a4.5 4.5 0 0 1-4.5 4.5h-10A4.5 4.5 0 0 1 2.5 16.5V11.1a2.5 2.5 0 0 1 1.3-2.2A2.5 2.5 0 0 1 2.5 6.7V5.5zm6.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm6 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM9 15.5a3 3 0 0 0 6 0H9z"
+              ></path>
+            </svg>
+            <span>fuzzzzy.itch.io</span>
+            <svg
+              class="w-4 h-4 text-white group-hover/btn:translate-x-1 transition-transform"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+            >
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Unity Tools Section -->
+  <section
+    id="tools"
+    class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-neutral-800/80"
+  >
+    <div class="mb-8 max-w-2xl">
+      <span
+        class="text-xs font-mono uppercase tracking-wider text-blue-400 font-semibold"
+        >Unity Ecosystem</span
+      >
+      <h2
+        class="text-2xl sm:text-3xl font-bold text-white mt-1.5 tracking-tight"
+      >
+        Unity Tools
+      </h2>
+    </div>
+
+    <!-- Tools Compact 4-col Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {allTools.map((tool) => <ToolCard {...tool} />)}
+    </div>
+  </section>
+</MainLayout>
