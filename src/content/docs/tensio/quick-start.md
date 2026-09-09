@@ -6,7 +6,10 @@ slug: docs/tensio/quick-start
 
 This guide will walk you through setting up a basic interactive physics rope in your scene in under a minute.
 
-![Creating a Rope in Unity](/images/tensio/quick_start_1.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/quick_start_1.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ---
 
@@ -57,7 +60,10 @@ Click the **Play** button in Unity. You will see your rope spawn, drape under re
 
 Anchoring ropes to static environmental points or moving Rigidbodies requires just a couple of clicks:
 
-![Pinning a Rope in Unity](/images/tensio/quick_start_2.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/quick_start_2.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 1. Select your `MyRope` GameObject in the Hierarchy.
 2. In the Scene View, click any control point along the curve (for example, the top point).

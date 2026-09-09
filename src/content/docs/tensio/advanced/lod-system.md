@@ -6,7 +6,10 @@ slug: docs/tensio/advanced/lod-system
 
 Tensio features an intelligent Level of Detail (LOD) subsystem designed to maximize frame budgets in open-world games and large-scale architectural environments. The system is managed by the `RopeLODController`.
 
-![LOD System Visualization](/images/tensio/lod.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/lod.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ---
 

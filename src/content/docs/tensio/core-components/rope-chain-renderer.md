@@ -6,7 +6,10 @@ slug: docs/tensio/core-components/rope-chain-renderer
 
 The `RopeChainRenderer` visualizes the rope as a succession of rigid geometric links rather than a continuous flexible tube. This component is specifically designed for industrial chains, nautical anchor cables, suspension bridge links, and decorative necklaces.
 
-![Rope Chain Renderer Visualization](/images/tensio/chain_renderer.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/chain_renderer.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ---
 

@@ -16,7 +16,10 @@ The floating toolbar docks directly inside the Scene View, giving instant access
 * **Relax:** Runs a momentary editor-time physics simulation letting the rope drape and settle naturally under gravity. This eliminates the need to manually shape sagging curves!
 * **Reset:** Instantly straightens the rope into a linear path between start and end anchors.
 
-![Editor Physics Relaxation](/images/tensio/simulation.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/simulation.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ### B. Spline Shape Modifiers
 * **Smooth:** Automatically computes continuous Bezier tangents across all selected points.
@@ -24,14 +27,20 @@ The floating toolbar docks directly inside the Scene View, giving instant access
 * **Align:** Distributes spacing between intermediate points evenly.
 * **Flatten Y Axis:** Normalizes all selected points to their average Y elevation.
 
-![Spline Shape Modifiers](/images/tensio/shape_modifiers.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/shape_modifiers.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ### C. Editor Productivity Settings
 * **Tangents Toggle:** Shows or hides Bezier handle vectors across all control points.
 * **Box Select:** Activates marquee selection for editing clusters of control points simultaneously.
 * **Magnet Snapping:** Snaps dragged points to adjacent collider surfaces in the scene.
 
-![Scene Editor Settings](/images/tensio/editor_settings.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/editor_settings.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ---
 
@@ -39,7 +48,10 @@ The floating toolbar docks directly inside the Scene View, giving instant access
 
 Clicking on any individual control point opens a detailed contextual inspector window:
 
-![Point Editor Window](/images/tensio/point_editor_window.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/point_editor_window.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 * **Pinning Controls:**
   * **Pinned Checkbox:** Toggles fixed constraint status for this point.
@@ -60,7 +72,10 @@ Clicking on any individual control point opens a detailed contextual inspector w
 
 Tensio makes editing ropes in the Scene View rapid and intuitive:
 
-![Mouse Shortcuts in Scene View](/images/tensio/shortcuts.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/shortcuts.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 | Shortcut | Action |
 | :--- | :--- |

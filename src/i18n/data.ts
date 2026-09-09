@@ -120,7 +120,7 @@ export const tools: ToolItem[] = [
     image: '/images/tools/fuzzyide.png',
     assetStoreUrl: 'https://assetstore.unity.com/packages/slug/395140',
     isFeatured: true,
-    isPublished: false,
+    isPublished: true,
   },
   {
     id: 'fuzzysave',

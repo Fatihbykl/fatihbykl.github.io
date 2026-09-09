@@ -6,7 +6,10 @@ slug: docs/tensio/core-components/rope-renderer
 
 The `RopeRenderer` component translates raw physics particle positions into a smooth, continuous 3D tube mesh in real time. It interpolates physics points using Catmull-Rom splines and constructs procedural geometry per frame with zero GC allocation.
 
-![Rope Renderer Visualization](/images/tensio/rope_renderer.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/rope_renderer.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ---
 

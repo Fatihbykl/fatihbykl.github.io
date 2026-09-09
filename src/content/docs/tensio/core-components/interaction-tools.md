@@ -12,7 +12,10 @@ Tensio includes production-ready interaction components allowing players or game
 
 The `RopeWinch` component dynamically spools rope out or reels it in, accurately mimicking hoists, crane cables, elevator lifts, and motorized winches.
 
-![Rope Winch Demonstration](/images/tensio/winch.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/winch.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ### Parameters
 
@@ -34,7 +37,10 @@ Instead of unnaturally stretching or compressing geometry, `RopeWinch` automatic
 
 The `RopeCutter` utility enables players to slice ropes dynamically during gameplay using mouse rays, laser cutters, or melee weapon sweeps.
 
-![Rope Cutter Demonstration](/images/tensio/cutter.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/cutter.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ### Usage
 

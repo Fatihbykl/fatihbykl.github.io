@@ -1,7 +1,7 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
 interface Props {
   title?: string;
@@ -11,13 +11,16 @@ interface Props {
 }
 
 const {
-  title = 'Fatih // Software Engineer & Unity Tool Architect',
-  description = 'Software engineer and Unity tool architect. Independent games, Unity Asset Store packages, and technical documentation.',
-  image = '/favicon.svg',
+  title = "Fatih // Unity Game & Tool Developer",
+  description = "Unity game and tool developer.",
+  image = "/favicon.png",
   showNavItems = true,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://fatih.github.io');
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  Astro.site || "https://fatihbykl.github.io",
+);
 ---
 
 <!doctype html>
@@ -25,13 +28,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://fatih.gi
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Google Fonts: Inter Tight & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
@@ -53,16 +59,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://fatih.gi
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
   </head>
-  
-  <body class="min-h-screen bg-[#0a0a0a] text-neutral-200 selection:bg-neutral-800 selection:text-white relative overflow-x-hidden flex flex-col justify-between antialiased">
-    
+
+  <body
+    class="min-h-screen bg-[#0a0a0a] text-neutral-200 selection:bg-neutral-800 selection:text-white relative overflow-x-hidden flex flex-col justify-between antialiased"
+  >
     <!-- Site-wide Technical Grid Background Layer -->
-    <div class="fixed inset-0 pointer-events-none z-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:3.5rem_3.5rem]"></div>
+    <div
+      class="fixed inset-0 pointer-events-none z-0 bg-[linear-gradient(to_right,#ffffff06_1px,transparent_1px),linear-gradient(to_bottom,#ffffff06_1px,transparent_1px)] bg-[size:3.5rem_3.5rem]"
+    >
+    </div>
 
     <!-- Top Sticky Navbar -->
-    <Navbar 
-      showNavItems={showNavItems} 
-    />
+    <Navbar showNavItems={showNavItems} />
 
     <!-- Main Content Slot -->
     <main class="relative z-10 flex-grow">
@@ -71,7 +79,5 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://fatih.gi
 
     <!-- Bottom Footer -->
     <Footer />
-
   </body>
 </html>
-

@@ -19,7 +19,10 @@ Navigate to **Tools** > **Tensio** > **Make Colliders Rope-Ready** in the top me
 1. In the Hierarchy or Scene View, select one or more GameObjects equipped with standard Unity colliders (`BoxCollider`, `SphereCollider`, or `CapsuleCollider`).
 2. Run **Tools** > **Tensio** > **Make Colliders Rope-Ready**.
 
-![Make Colliders Rope-Ready Utility](/images/tensio/make_colliders_rope_ready.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/make_colliders_rope_ready.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ---
 

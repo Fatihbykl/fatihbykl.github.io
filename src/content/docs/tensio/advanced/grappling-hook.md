@@ -6,7 +6,10 @@ slug: docs/tensio/advanced/grappling-hook
 
 Tensio includes a fully playable Grappling Hook demo in the `Tensio/Demos/GrapplingHook` folder, demonstrating how to dynamically instantiate, anchor, winch, and swing from ropes during gameplay.
 
-![Grappling Hook Gameplay Demonstration](/images/tensio/grappling_hook.gif)
+<video autoplay loop muted playsinline class="w-full rounded-xl border border-neutral-800 shadow-md my-4">
+  <source src="/images/tensio/grappling_hook.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ---
 
