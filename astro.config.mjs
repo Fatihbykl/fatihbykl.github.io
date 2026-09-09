@@ -3,12 +3,12 @@ import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://fatih.github.io',
+  site: 'https://fatihbykl.github.io',
   integrations: [
     starlight({
       title: 'Fuzzy Logic Labs — Docs',
       social: {
-        github: 'https://github.com',
+        github: 'https://github.com/fatihbykl',
       },
       components: {
         Sidebar: './src/components/StarlightSidebar.astro',
