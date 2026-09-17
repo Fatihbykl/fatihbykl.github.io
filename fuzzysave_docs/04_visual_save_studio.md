@@ -1,9 +1,3 @@
----
-title: "04. Visual Save Studio"
-description: "Comprehensive UI Toolkit suite: Dashboard, Drag-and-Drop mapping, Save Explorer, Events, and Code Bake."
-slug: docs/fuzzysave/visual-save-studio
----
-
 # 04. Visual Save Studio
 
 ## 🎨 Overview
@@ -17,7 +11,7 @@ Open the studio via the Unity menu:
 
 > [!TIP]
 > **GIF PLACEHOLDER: DRAG-AND-DROP WORKFLOW**
-> ![Visual Save Studio Drag and Drop](/images/fuzzysave/vss_drag_and_drop.gif)
+> ![Visual Save Studio Drag and Drop](media/vss_drag_and_drop.gif)
 > *Recommended Resolution: 1280x720 | Format: Animated GIF*
 > *Caption: Dragging variables from the Auto-Discovery tree directly into a Save Group card, followed by clicking Bake Code.*
 
@@ -85,7 +79,7 @@ This eliminates reflection entirely at runtime, delivering native C# speed.
 
 > [!TIP]
 > **GIF PLACEHOLDER: LIVE JSON SAVE EXPLORER**
-> ![Save Explorer Live JSON Editor](/images/fuzzysave/save_explorer_tree_edit.gif)
+> ![Save Explorer Live JSON Editor](media/save_explorer_tree_edit.gif)
 > *Recommended Resolution: 1280x720 | Format: Animated GIF*
 > *Caption: Exploring save files in Tree Mode, editing values in real time, inspecting RGBA color swatches, and saving changes back to disk.*
 
@@ -142,4 +136,4 @@ Visual editor for `FuzzySaveSettings.asset`:
 
 ## 🧭 Next Chapter
 
-Proceed to [05. Play Mode Live Debugger](/docs/fuzzysave/live-debugger/) to learn how to inspect memory, execute live cheats, and manipulate RAM snapshots while the game is running.
+Proceed to [05. Play Mode Live Debugger](05_playmode_live_debugger.md) to learn how to inspect memory, execute live cheats, and manipulate RAM snapshots while the game is running.

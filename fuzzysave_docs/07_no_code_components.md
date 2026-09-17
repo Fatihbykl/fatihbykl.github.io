@@ -1,9 +1,3 @@
----
-title: "07. No-Code Runtime Components"
-description: "AutoSaveManager, SaveTriggerZone checkpoints, SaveButtonBinding, SaveKeyBinding, and SaveFeedbackUI."
-slug: docs/fuzzysave/nocode-components
----
-
 # 07. No-Code Runtime Components
 
 ## 🧩 Overview
@@ -14,7 +8,7 @@ FuzzySave includes a rich suite of plug-and-play MonoBehaviour components design
 
 > [!TIP]
 > **GIF PLACEHOLDER: CHECKPOINT & TOAST UI FEEDBACK**
-> ![SaveTriggerZone with SaveFeedbackUI Toast](/images/fuzzysave/triggerzone_toast_feedback.gif)
+> ![SaveTriggerZone with SaveFeedbackUI Toast](media/triggerzone_toast_feedback.gif)
 > *Recommended Resolution: 1280x720 | Format: Animated GIF*
 > *Caption: Player entering a green SaveTriggerZone checkpoint, prompting the SaveFeedbackUI spinner and toast notification.*
 
@@ -124,4 +118,4 @@ Automatically instantiated upon scene load via `[RuntimeInitializeOnLoadMethod]`
 
 ## 🧭 Next Chapter
 
-Proceed to [08. Slot Metadata & GPU Thumbnails](/docs/fuzzysave/slot-metadata/) to explore rich slot data cards and zero-stall GPU screenshot capture.
+Proceed to [08. Slot Metadata & GPU Thumbnails](08_slot_metadata_and_thumbnails.md) to explore rich slot data cards and zero-stall GPU screenshot capture.

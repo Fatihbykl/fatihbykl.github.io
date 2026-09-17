@@ -1,9 +1,3 @@
----
-title: "12. Samples & Stress Benchmark Suite"
-description: "3D interactive demo scene walkthrough, 500+ physics item benchmark suite, and performance auditing."
-slug: docs/fuzzysave/tutorials
----
-
 # 12. Samples & Stress Benchmark Suite
 
 ## 🧪 Overview
@@ -16,7 +10,7 @@ FuzzySave ships with two production-ready test scenes:
 
 > [!TIP]
 > **GIF PLACEHOLDER: 3D DEMO SCENE WALKTHROUGH**
-> ![FuzzySave 3D Demo Scene](/images/fuzzysave/demo_scene_walkthrough.gif)
+> ![FuzzySave 3D Demo Scene](media/demo_scene_walkthrough.gif)
 > *Recommended Resolution: 1280x720 | Format: Animated GIF*
 > *Caption: Controlling the player, opening chests, spawning dynamic crystal loot with L, and testing instant Slot 1/2/3 saves with toast notifications.*
 
@@ -46,7 +40,7 @@ Located in: `Assets/FuzzyLogicLabs/FuzzySave/Samples/Demo/DemoScene.unity`
 
 > [!TIP]
 > **IMAGE PLACEHOLDER: STRESS BENCHMARK HUD**
-> ![500+ Objects Stress Benchmark HUD](/images/fuzzysave/stress_benchmark_hud.png)
+> ![500+ Objects Stress Benchmark HUD](media/stress_benchmark_hud.png)
 > *Recommended Resolution: 1280x720 | Format: PNG*
 > *Caption: Stress testing FuzzySave with 500 active physics items, 100 roaming agents, and the PerformanceMetricsHUD showing 0.8ms gather time at 60 FPS.*
 
@@ -104,4 +98,4 @@ OVERALL STATUS: AUDIT PASSED (0 ERRORS DETECTED)
 
 ## 🧭 Next Chapter
 
-Proceed to [13. Complete C# API Reference](/docs/fuzzysave/api-reference/) for the definitive programmatic reference for `FuzzySaveManager`.
+Proceed to [13. Complete C# API Reference](13_api_reference.md) for the definitive programmatic reference for `FuzzySaveManager`.

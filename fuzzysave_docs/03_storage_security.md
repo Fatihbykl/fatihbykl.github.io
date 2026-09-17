@@ -1,9 +1,3 @@
----
-title: "03. Storage, Security & Data Integrity"
-description: "Fail-safe atomic file swaps, AES-256 encryption, GZip compression, and HMAC-SHA256 data integrity."
-slug: docs/fuzzysave/storage-and-security
----
-
 # 03. Storage, Security & Data Integrity
 
 ## 🛡️ Introduction
@@ -39,7 +33,7 @@ flowchart TD
 
 > [!TIP]
 > **IMAGE PLACEHOLDER: ENCRYPTED FILE COMPARISON**
-> ![Plain JSON vs AES-256 Encrypted Save Comparison](/images/fuzzysave/encrypted_vs_plain_comparison.png)
+> ![Plain JSON vs AES-256 Encrypted Save Comparison](media/encrypted_vs_plain_comparison.png)
 > *Recommended Resolution: 1200x600 | Format: PNG*
 > *Caption: Side-by-side view showing a plain text JSON file vs an AES-256 encrypted + GZip compressed FuzzySave payload opened in a hex editor.*
 
@@ -113,4 +107,4 @@ Standard serializers fail when serializing Unity-specific types (such as `GameOb
 
 ## 🧭 Next Chapter
 
-Proceed to [04. Visual Save Studio](/docs/fuzzysave/visual-save-studio/) to tour the UI Toolkit editor suite, drag-and-drop mapping, and the live Save Explorer.
+Proceed to [04. Visual Save Studio](04_visual_save_studio.md) to tour the UI Toolkit editor suite, drag-and-drop mapping, and the live Save Explorer.

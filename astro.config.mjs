@@ -175,22 +175,35 @@ export default defineConfig({
           label: 'FuzzySave: Visual & Zero-Code Persistence',
           items: [
             {
-              label: 'Overview & Architecture',
+              label: 'Overview & Quick Start',
               link: '/docs/fuzzysave/',
             },
             {
-              label: 'Sample Walkthrough & Tutorials',
-              link: '/docs/fuzzysave/tutorials/',
-            },
-            {
-              label: 'Editor Suite',
+              label: 'Architecture & Core Pipeline',
               items: [
                 {
-                  label: 'Visual Save Studio',
+                  label: '01. Architecture & Philosophy',
+                  link: '/docs/fuzzysave/architecture-overview/',
+                },
+                {
+                  label: '02. Async Pipeline & Zero-Hitch',
+                  link: '/docs/fuzzysave/async-pipeline/',
+                },
+                {
+                  label: '03. Storage, Security & Integrity',
+                  link: '/docs/fuzzysave/storage-and-security/',
+                },
+              ],
+            },
+            {
+              label: 'Visual Editor Suite',
+              items: [
+                {
+                  label: '04. Visual Save Studio',
                   link: '/docs/fuzzysave/visual-save-studio/',
                 },
                 {
-                  label: 'Play Mode Live Debugger',
+                  label: '05. Play Mode Live Debugger',
                   link: '/docs/fuzzysave/live-debugger/',
                 },
               ],
@@ -199,40 +212,48 @@ export default defineConfig({
               label: 'Core Systems & Persistence',
               items: [
                 {
-                  label: 'Storage Engine, Security & Migration',
-                  link: '/docs/fuzzysave/storage-and-security/',
-                },
-                {
-                  label: 'Scene & Dynamic Object Tracking',
+                  label: '06. Scene Tracking & Graveyard',
                   link: '/docs/fuzzysave/scene-tracking/',
                 },
                 {
-                  label: 'No-Code Runtime Components',
+                  label: '07. No-Code Runtime Components',
                   link: '/docs/fuzzysave/nocode-components/',
                 },
                 {
-                  label: 'Attributes & Code-First Architecture',
+                  label: '08. Slot Metadata & Thumbnails',
+                  link: '/docs/fuzzysave/slot-metadata/',
+                },
+                {
+                  label: '09. Cloud Synchronization',
+                  link: '/docs/fuzzysave/cloud-sync/',
+                },
+                {
+                  label: '10. Schema Migrations & Versioning',
+                  link: '/docs/fuzzysave/schema-migrations/',
+                },
+                {
+                  label: '11. Attributes & Code-First',
                   link: '/docs/fuzzysave/attributes/',
                 },
                 {
-                  label: 'DTOs & Zero-Allocation Serialization',
+                  label: 'DTOs & Zero-Allocation Structs',
                   link: '/docs/fuzzysave/dto-serialization/',
-                },
-                {
-                  label: 'Cloud Synchronization',
-                  link: '/docs/fuzzysave/cloud-sync/',
                 },
               ],
             },
             {
-              label: 'Reference & Guides',
+              label: 'Samples, Reference & FAQ',
               items: [
                 {
-                  label: 'C# Scripting API Reference',
+                  label: '12. Samples & Benchmark Suite',
+                  link: '/docs/fuzzysave/tutorials/',
+                },
+                {
+                  label: '13. C# Scripting API Reference',
                   link: '/docs/fuzzysave/api-reference/',
                 },
                 {
-                  label: 'Best Practices & Troubleshooting',
+                  label: '14. Troubleshooting & FAQ',
                   link: '/docs/fuzzysave/best-practices/',
                 },
               ],

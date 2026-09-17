@@ -1,9 +1,3 @@
----
-title: "13. Complete C# API Reference"
-description: "Exhaustive method-by-method API reference for FuzzySaveManager, event delegates, and data accessors."
-slug: docs/fuzzysave/api-reference
----
-
 # 13. Complete C# API Reference
 
 ## 📚 Overview
@@ -157,8 +151,6 @@ public static void ClearAllSlots()
 public static string[] GetAvailableSlots()
 ```
 
----
-
 ### `GetSlotMetadataAsync` & `GetAllSlotMetadataAsync`
 Reads companion `.meta` files without loading multi-megabyte save payloads.
 ```csharp
@@ -247,4 +239,4 @@ public static void TriggerEvent(string eventName)
 
 ## 🧭 Next Chapter
 
-Proceed to [14. Troubleshooting & FAQ](/docs/fuzzysave/best-practices/) for benchmark comparisons, mobile storage considerations, and common questions.
+Proceed to [14. Troubleshooting & FAQ](14_troubleshooting_faq.md) for benchmark comparisons, mobile storage considerations, and common questions.

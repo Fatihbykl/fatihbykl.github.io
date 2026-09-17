@@ -1,9 +1,3 @@
----
-title: "06. Tracking Engine, Dynamic Spawns & Graveyard"
-description: "SaveGuid, duplicate detection, DynamicSpawnTracker, runtime prefab re-instantiation, and GraveyardRegistry."
-slug: docs/fuzzysave/scene-tracking
----
-
 # 06. Tracking Engine, Dynamic Spawns & Graveyard
 
 ## 📍 Overview
@@ -144,4 +138,4 @@ Found in `Editor/CodeMod/CodeRewriter.cs`, the `CodeRewriter` is an editor utili
 
 ## 🧭 Next Chapter
 
-Proceed to [07. No-Code Runtime Components](/docs/fuzzysave/nocode-components/) to explore the ready-to-use checkpoint zones, rolling autosave managers, and UI bindings.
+Proceed to [07. No-Code Runtime Components](07_no_code_components.md) to explore the ready-to-use checkpoint zones, rolling autosave managers, and UI bindings.

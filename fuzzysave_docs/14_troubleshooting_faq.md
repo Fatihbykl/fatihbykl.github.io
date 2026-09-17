@@ -1,9 +1,3 @@
----
-title: "14. Troubleshooting & FAQ"
-description: "Feature comparison matrix, mobile storage considerations, common issues, and FAQ."
-slug: docs/fuzzysave/best-practices
----
-
 # 14. Troubleshooting & FAQ
 
 ## 📊 Comprehensive Comparison Table

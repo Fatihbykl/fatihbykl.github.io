@@ -1,9 +1,3 @@
----
-title: "09. Cloud Synchronization"
-description: "CloudSyncManager, conflict resolution policies, UGS Cloud Save, Steam Cloud, PlayFab, Firebase, and REST API."
-slug: docs/fuzzysave/cloud-sync
----
-
 # 09. Cloud Synchronization
 
 ## ☁️ Overview
@@ -16,7 +10,7 @@ FuzzySave features a provider-agnostic **Cloud Synchronization Architecture** th
 
 > [!TIP]
 > **IMAGE PLACEHOLDER: CLOUD SYNC ARCHITECTURE DIAGRAM**
-> ![Cloud Synchronization Workflow](/images/fuzzysave/cloud_sync_architecture.png)
+> ![Cloud Synchronization Workflow](media/cloud_sync_architecture.png)
 > *Recommended Resolution: 1200x600 | Format: PNG*
 > *Caption: Architectural diagram showing local file writes triggering asynchronous uploads through CloudSyncManager to UGS, Steam, PlayFab, Firebase, or Custom REST endpoints.*
 
@@ -125,4 +119,4 @@ public class CloudSaveController : MonoBehaviour
 
 ## 🧭 Next Chapter
 
-Proceed to [10. Schema Migrations & Versioning](/docs/fuzzysave/schema-migrations/) to learn how to update game data structures without breaking older player save files.
+Proceed to [10. Schema Migrations & Versioning](10_schema_migrations.md) to learn how to update game data structures without breaking older player save files.

@@ -1,9 +1,3 @@
----
-title: "05. Play Mode Live Debugger"
-description: "Runtime inspection, live variable injection, instant RAM snapshots, scene pinging, and graveyard controls."
-slug: docs/fuzzysave/live-debugger
----
-
 # 05. Play Mode Live Debugger
 
 ## 🎮 Overview
@@ -17,7 +11,7 @@ Open the debugger via the Unity menu:
 
 > [!TIP]
 > **GIF PLACEHOLDER: LIVE INJECTION & CHEAT CONSOLE**
-> ![Play Mode Live Debugger Injection](/images/fuzzysave/live_debugger_injection.gif)
+> ![Play Mode Live Debugger Injection](media/live_debugger_injection.gif)
 > *Recommended Resolution: 1280x720 | Format: Animated GIF*
 > *Caption: Changing player_hp to 9999 and clicking Inject in the Live Debugger to instantly alter health in the running game without pausing.*
 
@@ -103,4 +97,4 @@ When objects registered with `SaveGuid` are destroyed in the scene (such as open
 
 ## 🧭 Next Chapter
 
-Proceed to [06. Tracking Engine, Dynamic Spawns & Graveyard](/docs/fuzzysave/scene-tracking/) to explore the mechanics behind `SaveGuid`, runtime entity instantiation, and destruction tracking.
+Proceed to [06. Tracking Engine, Dynamic Spawns & Graveyard](06_tracking_engine_and_graveyard.md) to explore the mechanics behind `SaveGuid`, runtime entity instantiation, and destruction tracking.

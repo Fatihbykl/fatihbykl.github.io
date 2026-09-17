@@ -1,9 +1,3 @@
----
-title: "11. Attributes & Code-First Development"
-description: "[FuzzySave], [SaveField], [SaveGroup], [SaveEvent], and code-first persistence attributes."
-slug: docs/fuzzysave/attributes
----
-
 # 11. Attributes & Code-First Development
 
 ## 🏷️ Overview
@@ -101,4 +95,4 @@ Attributes and Visual Save Studio are not mutually exclusive:
 
 ## 🧭 Next Chapter
 
-Proceed to [12. Samples & Stress Benchmark Suite](/docs/fuzzysave/tutorials/) to explore the interactive 3D demo world and 500+ physics item stress test suite.
+Proceed to [12. Samples & Stress Benchmark Suite](12_samples_and_benchmarks.md) to explore the interactive 3D demo world and 500+ physics item stress test suite.
