@@ -41,7 +41,6 @@ The documentation is organized into focused, comprehensive chapters. Navigate th
 | **11** | [Attributes & Code-First Development](/docs/fuzzysave/attributes/) | `[FuzzySave]`, `[SaveField]`, `[SaveGroup]`, `[SaveEvent]`, selective persistence without editor tooling. |
 | **12** | [Samples & Stress Benchmark Suite](/docs/fuzzysave/tutorials/) | 3D interactive demo scene (`DemoScene`), 500+ physics item benchmark suite, `PerformanceSceneBuilder`, Golden Baseline Audit, `PerformanceMetricsHUD`. |
 | **13** | [Complete C# API Reference](/docs/fuzzysave/api-reference/) | Exhaustive method-by-method reference for `FuzzySaveManager`, event delegates, signatures, parameters, return values, and code samples. |
-| **14** | [Troubleshooting & FAQ](/docs/fuzzysave/best-practices/) | Benchmark comparison table (vs PlayerPrefs, EasySave, JsonUtility), common questions, mobile storage guidelines, edge-case solutions. |
 
 ---
 

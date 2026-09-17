@@ -241,8 +241,3 @@ public static event Action<string> OnCustomEventTriggered;
 public static void TriggerEvent(string eventName)
 ```
 
----
-
-## Next Chapter
-
-Proceed to [14. Troubleshooting & FAQ](/docs/fuzzysave/best-practices/) for benchmark comparisons, mobile storage considerations, and common questions.

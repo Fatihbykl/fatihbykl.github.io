@@ -246,7 +246,7 @@ export default defineConfig({
               ],
             },
             {
-              label: 'Samples, Reference & FAQ',
+              label: 'Samples & API Reference',
               items: [
                 {
                   label: '12. Samples & Benchmark Suite',
@@ -255,10 +255,6 @@ export default defineConfig({
                 {
                   label: '13. C# Scripting API Reference',
                   link: '/docs/fuzzysave/api-reference/',
-                },
-                {
-                  label: '14. Troubleshooting & FAQ',
-                  link: '/docs/fuzzysave/best-practices/',
                 },
               ],
             },
