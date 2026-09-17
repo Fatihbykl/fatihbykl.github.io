@@ -4,9 +4,7 @@ description: "Comprehensive UI Toolkit suite: Dashboard, Drag-and-Drop mapping, 
 slug: docs/fuzzysave/visual-save-studio
 ---
 
-# 04. Visual Save Studio
-
-## 🎨 Overview
+## Overview
 
 **Visual Save Studio** is FuzzySave's flagship editor environment built entirely with Unity's modern **UI Toolkit** and **UI Builder**. It provides a comprehensive, visual command center to configure persistence, inspect live disk files, bind event triggers, and generate high-performance C# code without writing boilerplate.
 
@@ -15,15 +13,12 @@ Open the studio via the Unity menu:
 
 ---
 
-> [!TIP]
-> **GIF PLACEHOLDER: DRAG-AND-DROP WORKFLOW**
-> ![Visual Save Studio Drag and Drop](/images/fuzzysave/vss_drag_and_drop.gif)
-> *Recommended Resolution: 1280x720 | Format: Animated GIF*
-> *Caption: Dragging variables from the Auto-Discovery tree directly into a Save Group card, followed by clicking Bake Code.*
+![Visual Save Studio Drag and Drop](/images/fuzzysave/vss_drag_and_drop.gif)
+*Dragging variables from the Auto-Discovery tree directly into a Save Group card, followed by clicking Bake Code.*
 
 ---
 
-## 🖥️ Studio Layout Architecture
+## Studio Layout Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -31,7 +26,7 @@ Open the studio via the Unity menu:
 ├─────────────────────────────────────────────────────────────────────────────┤
 │ [Dashboard]   [Save Events]   [Save Slots]   [Save Explorer]   [Settings]   │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│ SOL PANEL: Discovery Tree     │ ORTA PANEL: Save Groups    │ SAĞ: Group & C#│
+│ LEFT PANEL: Discovery Tree    │ CENTER PANEL: Save Groups  │ RIGHT: Group & │
 │ 🔍 Search Scripts & Types     │ 📁 PlayerStatsGroup        │ ⚙️ Group       │
 │ [User Scripts|Engine|SaveMap] │   ├── player_hp   [Alias]  │    Settings    │
 │ 📂 Target Folder: /Scripts    │   ├── player_gold [Alias]  │ 📄 Live C#     │
@@ -46,7 +41,7 @@ Open the studio via the Unity menu:
 
 ---
 
-## 📑 1. Dashboard Tab: Visual Mapping & Code Baking
+## 1. Dashboard Tab: Visual Mapping & Code Baking
 
 The **Dashboard** tab is the heart of no-code configuration:
 
@@ -62,7 +57,7 @@ The **Dashboard** tab is the heart of no-code configuration:
 ### Center Panel: Save Groups (Containers)
 - Group your data logically (e.g., `PlayerGroup`, `WorldStateGroup`, `SettingsGroup`).
 - **Drag-and-Drop:** Simply grab any variable or property from the left panel and drop it onto a Save Group card.
-- **Aliases:** Assign clean, space-saving JSON keys to fields (e.g., koddaki `m_CurrentPlayerHealthPoints` becomes `"hp"` in the save file).
+- **Aliases:** Assign clean, space-saving JSON keys to fields (e.g., in-code `m_CurrentPlayerHealthPoints` becomes `"hp"` in the save file).
 - **Summary Variable Toggle (`isSummaryVariable`):** Flagging a field (like `level` or `gold`) ensures it is extracted into `SaveSlotMetadata.summaryValues` for display on save slot UI cards without loading the full save.
 
 ### Right Panel: Group Inspector & Live C# Preview
@@ -83,15 +78,12 @@ This eliminates reflection entirely at runtime, delivering native C# speed.
 
 ---
 
-> [!TIP]
-> **GIF PLACEHOLDER: LIVE JSON SAVE EXPLORER**
-> ![Save Explorer Live JSON Editor](/images/fuzzysave/save_explorer_tree_edit.gif)
-> *Recommended Resolution: 1280x720 | Format: Animated GIF*
-> *Caption: Exploring save files in Tree Mode, editing values in real time, inspecting RGBA color swatches, and saving changes back to disk.*
+![Save Explorer Live JSON Editor](/images/fuzzysave/save_explorer_tree_edit.gif)
+*Exploring save files in Tree Mode, editing values in real time, inspecting RGBA color swatches, and saving changes back to disk.*
 
 ---
 
-## 🔍 2. Save Explorer Tab: Real-Time Disk File Editor
+## 2. Save Explorer Tab: Real-Time Disk File Editor
 
 The **Save Explorer** allows developers and QA testers to inspect, search, and edit disk save files directly inside Unity without needing an external text editor.
 
@@ -111,7 +103,7 @@ The **Save Explorer** allows developers and QA testers to inspect, search, and e
 
 ---
 
-## ⚡ 3. Save Events Tab
+## 3. Save Events Tab
 
 Configure automated save triggers without writing code:
 - **Built-in Triggers:** `OnSceneLoaded`, `OnSceneUnloaded`, `OnApplicationPause`, `OnApplicationQuit`.
@@ -120,7 +112,7 @@ Configure automated save triggers without writing code:
 
 ---
 
-## 🗄️ 4. Save Slots Tab
+## 4. Save Slots Tab
 
 Manage physical save files stored on the local machine:
 - Displays all detected `.sav` and `.bin` files under `FuzzySaveData`.
@@ -129,7 +121,7 @@ Manage physical save files stored on the local machine:
 
 ---
 
-## ⚙️ 5. Settings Tab
+## 5. Settings Tab
 
 Visual editor for `FuzzySaveSettings.asset`:
 - Configure save directory name (default: `FuzzySaveData`).
@@ -140,6 +132,6 @@ Visual editor for `FuzzySaveSettings.asset`:
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [05. Play Mode Live Debugger](/docs/fuzzysave/live-debugger/) to learn how to inspect memory, execute live cheats, and manipulate RAM snapshots while the game is running.

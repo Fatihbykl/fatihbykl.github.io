@@ -4,9 +4,7 @@ description: "[FuzzySave], [SaveField], [SaveGroup], [SaveEvent], and code-first
 slug: docs/fuzzysave/attributes
 ---
 
-# 11. Attributes & Code-First Development
-
-## 🏷️ Overview
+## Overview
 
 While Visual Save Studio provides a visual workflow for technical designers, programmers often prefer **Code-First Architecture**.
 
@@ -14,7 +12,7 @@ FuzzySave provides declarative C# attributes that allow developers to tag classe
 
 ---
 
-## 📋 Attribute Reference Table
+## Attribute Reference Table
 
 | Attribute | Valid Targets | Purpose |
 |---|---|---|
@@ -26,7 +24,7 @@ FuzzySave provides declarative C# attributes that allow developers to tag classe
 
 ---
 
-## 💻 Code-First Example: Player Character & Events
+## Code-First Example: Player Character & Events
 
 ```csharp
 using System;
@@ -73,7 +71,7 @@ public class PlayerHero : MonoBehaviour
 
 ---
 
-## 🔒 Group-Specific Encryption via Attributes
+## Group-Specific Encryption via Attributes
 
 You can isolate sensitive game values (like in-game currency or microtransaction unlocks) into an encrypted group while leaving regular gameplay settings unencrypted:
 
@@ -91,7 +89,7 @@ public class PlayerWallet : MonoBehaviour
 
 ---
 
-## 🤝 Seamless Harmony with Visual Save Studio
+## Seamless Harmony with Visual Save Studio
 
 Attributes and Visual Save Studio are not mutually exclusive:
 - If a class is decorated with `[FuzzySave]`, Visual Save Studio's discovery scanner recognizes the attributes and flags the fields automatically.
@@ -99,6 +97,6 @@ Attributes and Visual Save Studio are not mutually exclusive:
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [12. Samples & Stress Benchmark Suite](/docs/fuzzysave/tutorials/) to explore the interactive 3D demo world and 500+ physics item stress test suite.

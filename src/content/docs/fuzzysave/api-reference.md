@@ -4,9 +4,7 @@ description: "Exhaustive method-by-method API reference for FuzzySaveManager, ev
 slug: docs/fuzzysave/api-reference
 ---
 
-# 13. Complete C# API Reference
-
-## 📚 Overview
+## Overview
 
 The static `FuzzySaveManager` class serves as the primary gateway to all persistence, snapshotting, and slot management routines.
 
@@ -14,7 +12,7 @@ All methods are thread-safe or automatically marshal execution to the appropriat
 
 ---
 
-## 🗃️ 1. In-Memory Data Access
+## 1. In-Memory Data Access
 
 ### `SetData<T>`
 Stores a strongly-typed value in the current in-memory save container.
@@ -71,7 +69,7 @@ public static void DeleteData(string key)
 
 ---
 
-## 💾 2. Asynchronous Save & Load Pipeline
+## 2. Asynchronous Save & Load Pipeline
 
 ### `SaveAsync`
 Asynchronously serializes and writes the current game state to local disk (and triggers cloud upload if enabled).
@@ -117,7 +115,7 @@ public static Task<bool> LoadGroupAsync(string groupName, string slotName = null
 
 ---
 
-## ⚡ 3. RAM Snapshots (Time-Travel)
+## 3. RAM Snapshots (Time-Travel)
 
 ### `TakeSnapshot`
 Captures the entire active memory container into high-speed RAM.
@@ -141,7 +139,7 @@ public static void RestoreSnapshot(string snapshotId)
 
 ---
 
-## 🗄️ 4. Slot & Companion Metadata
+## 4. Slot & Companion Metadata
 
 ### `ActiveSlot`
 Property to get or set the default active slot filename.
@@ -179,7 +177,7 @@ public static string GetSlotSummaryValue(string key)
 
 ---
 
-## 📸 5. GPU Thumbnail Screen Capture
+## 5. GPU Thumbnail Screen Capture
 
 ### `CaptureThumbnailBase64Async`
 Asynchronously captures the current frame buffer via `AsyncGPUReadback` and encodes it to a Base64 JPEG string.
@@ -189,7 +187,7 @@ public static Task<string> CaptureThumbnailBase64Async(int width = 240, int heig
 
 ---
 
-## 🪦 6. Graveyard & Destruction Tracking
+## 6. Graveyard & Destruction Tracking
 
 ```csharp
 // Destroy GameObject and register GUID to prevent respawning on reload:
@@ -209,7 +207,7 @@ public static List<string> GetDestroyedGuids()
 
 ---
 
-## 📊 7. Diagnostics & Profiling Properties
+## 7. Diagnostics & Profiling Properties
 
 ```csharp
 // Duration of Main Thread gathering during last save (ms)
@@ -229,7 +227,7 @@ public static float TotalPlaytimeSeconds { get; }
 
 ---
 
-## 🔔 8. Global Events & Delegates
+## 8. Global Events & Delegates
 
 ```csharp
 public static event Action<string> OnSaveStarted;
@@ -245,6 +243,6 @@ public static void TriggerEvent(string eventName)
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [14. Troubleshooting & FAQ](/docs/fuzzysave/best-practices/) for benchmark comparisons, mobile storage considerations, and common questions.

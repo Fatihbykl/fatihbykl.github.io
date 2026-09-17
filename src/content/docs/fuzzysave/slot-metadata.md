@@ -4,9 +4,7 @@ description: "SaveSlotMetadata, summary field keys, zero-stall AsyncGPUReadback 
 slug: docs/fuzzysave/slot-metadata
 ---
 
-# 08. Slot Metadata & GPU Thumbnails
-
-## 🖼️ Overview
+## Overview
 
 Modern games rarely present players with a raw text list of save files. Players expect rich **Save Slot Cards** showing:
 - A visual screenshot of where they saved.
@@ -18,15 +16,12 @@ FuzzySave provides this out of the box through **Lightweight Companion Metadata*
 
 ---
 
-> [!TIP]
-> **IMAGE PLACEHOLDER: RICH SAVE SLOT CARD**
-> ![Rich Save Slot Card UI](/images/fuzzysave/save_slot_card_preview.png)
-> *Recommended Resolution: 800x450 | Format: PNG*
-> *Caption: Modern UI save card displaying the captured gameplay thumbnail, playtime, timestamp, and summary values (Player Level, Gold, Active Quest).*
+![Rich Save Slot Card UI](/images/fuzzysave/save_slot_card_preview.png)
+*Modern UI save card displaying the captured gameplay thumbnail, playtime, timestamp, and summary values (Player Level, Gold, Active Quest).*
 
 ---
 
-## 📄 1. The `SaveSlotMetadata` Structure
+## 1. The `SaveSlotMetadata` Structure
 
 Whenever a slot is saved, FuzzySave writes a lightweight companion metadata file (e.g., `slot_1.meta` alongside `slot_1.sav`). 
 
@@ -66,7 +61,7 @@ List<SaveSlotMetadata> allSlots = await FuzzySaveManager.GetAllSlotMetadataAsync
 
 ---
 
-## ⚡ 2. Zero-Stall GPU Thumbnail Capture (`AsyncGPUReadback`)
+## 2. Zero-Stall GPU Thumbnail Capture (`AsyncGPUReadback`)
 
 ### The Problem with `Texture2D.ReadPixels`:
 Standard Unity screenshot solutions call `ReadPixels`, which halts the CPU main thread until the GPU finishes rendering the current frame buffer—causing a noticeable 15ms to 40ms hitch.
@@ -91,7 +86,7 @@ string base64Image = await FuzzySaveManager.CaptureThumbnailBase64Async(width: 2
 
 ---
 
-## 📊 3. Summary Field Keys
+## 3. Summary Field Keys
 
 Instead of loading an entire 5MB world save just to display the player's level and gold on the menu, mark your variables as summary keys:
 1. In `FuzzySaveSettings`, add keys to `slotSummaryFieldKeys` (e.g., `"level"`, `"player_gold"`, `"difficulty"`).
@@ -110,7 +105,7 @@ if (meta.summaryValues.TryGetValue("player_gold", out string goldStr))
 
 ---
 
-## 💻 4. Practical Implementation: Building a Save Slot Card
+## 4. Practical Implementation: Building a Save Slot Card
 
 ```csharp
 using UnityEngine;
@@ -164,6 +159,6 @@ public class SaveSlotCardUI : MonoBehaviour
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [09. Cloud Synchronization](/docs/fuzzysave/cloud-sync/) to explore multi-provider cloud saves and conflict resolution strategies.

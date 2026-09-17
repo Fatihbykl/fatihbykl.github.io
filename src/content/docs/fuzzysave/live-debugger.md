@@ -4,9 +4,7 @@ description: "Runtime inspection, live variable injection, instant RAM snapshots
 slug: docs/fuzzysave/live-debugger
 ---
 
-# 05. Play Mode Live Debugger
-
-## 🎮 Overview
+## Overview
 
 The **Play Mode Live Debugger** is a real-time inspection, diagnostic, and cheat console that provides an X-ray view into FuzzySave's runtime memory state while your game is actively playing.
 
@@ -15,15 +13,12 @@ Open the debugger via the Unity menu:
 
 ---
 
-> [!TIP]
-> **GIF PLACEHOLDER: LIVE INJECTION & CHEAT CONSOLE**
-> ![Play Mode Live Debugger Injection](/images/fuzzysave/live_debugger_injection.gif)
-> *Recommended Resolution: 1280x720 | Format: Animated GIF*
-> *Caption: Changing player_hp to 9999 and clicking Inject in the Live Debugger to instantly alter health in the running game without pausing.*
+![Play Mode Live Debugger Injection](/images/fuzzysave/live_debugger_injection.gif)
+*Changing player_hp to 9999 and clicking Inject in the Live Debugger to instantly alter health in the running game without pausing.*
 
 ---
 
-## 🖥️ Debugger Interface Layout
+## Debugger Interface Layout
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -53,7 +48,7 @@ Open the debugger via the Unity menu:
 
 ---
 
-## ⚡ Key Capabilities
+## Key Capabilities
 
 ### 1. Real-Time Status & Slot Controls
 - **Live Status Badge:** Displays green `● LIVE (ONLINE)` while in Play Mode. In Edit Mode, a clear warning card explains that memory inspection requires an active game session.
@@ -101,6 +96,6 @@ When objects registered with `SaveGuid` are destroyed in the scene (such as open
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [06. Tracking Engine, Dynamic Spawns & Graveyard](/docs/fuzzysave/scene-tracking/) to explore the mechanics behind `SaveGuid`, runtime entity instantiation, and destruction tracking.

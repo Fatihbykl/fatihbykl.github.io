@@ -4,23 +4,18 @@ description: "AutoSaveManager, SaveTriggerZone checkpoints, SaveButtonBinding, S
 slug: docs/fuzzysave/nocode-components
 ---
 
-# 07. No-Code Runtime Components
-
-## 🧩 Overview
+## Overview
 
 FuzzySave includes a rich suite of plug-and-play MonoBehaviour components designed for level designers, technical artists, and teams seeking zero-code gameplay persistence. Simply attach these components to scene objects or UI prefabs to establish full save and load mechanics.
 
 ---
 
-> [!TIP]
-> **GIF PLACEHOLDER: CHECKPOINT & TOAST UI FEEDBACK**
-> ![SaveTriggerZone with SaveFeedbackUI Toast](/images/fuzzysave/triggerzone_toast_feedback.gif)
-> *Recommended Resolution: 1280x720 | Format: Animated GIF*
-> *Caption: Player entering a green SaveTriggerZone checkpoint, prompting the SaveFeedbackUI spinner and toast notification.*
+![SaveTriggerZone with SaveFeedbackUI Toast](/images/fuzzysave/triggerzone_toast_feedback.gif)
+*Player entering a green SaveTriggerZone checkpoint, prompting the SaveFeedbackUI spinner and toast notification.*
 
 ---
 
-## ⏱️ 1. `AutoSaveManager`
+## 1. AutoSaveManager
 
 The `AutoSaveManager` runs autonomously in the background to handle periodic saves and lifecycle triggers.
 
@@ -46,7 +41,7 @@ Inspector: [FuzzySave/Auto Save Manager]
 
 ---
 
-## 🚪 2. `SaveTriggerZone`
+## 2. SaveTriggerZone
 
 Attach `SaveTriggerZone` to any GameObject with a 2D or 3D Collider (`isTrigger = true`) to create checkpoints, level exit saves, or auto-load gates.
 
@@ -58,13 +53,13 @@ Attach `SaveTriggerZone` to any GameObject with a 2D or 3D Collider (`isTrigger 
   - `m_CooldownSeconds`: Prevents double triggers when a player paces inside the zone.
   - `m_OneShot`: Ensures the checkpoint only activates once in its lifetime.
 - **Scene View Gizmos:** Automatically draws colored 3D wire/solid gizmos in the Scene View:
-  - 🟢 **Green:** Save Action
-  - 🔵 **Blue:** Load Action
-  - 🔴 **Red:** Delete Action
+  - **Green:** Save Action
+  - **Blue:** Load Action
+  - **Red:** Delete Action
 
 ---
 
-## 🖱️ 3. `SaveButtonBinding`
+## 3. SaveButtonBinding
 
 Attach `SaveButtonBinding` to any standard Unity UI `Button` to convert it into a save or load button without writing click listeners.
 
@@ -73,7 +68,7 @@ When saving or loading begins, `SaveButtonBinding` automatically sets `button.in
 
 ---
 
-## ⌨️ 4. `SaveKeyBinding` (Quick Save / Quick Load)
+## 4. SaveKeyBinding (Quick Save / Quick Load)
 
 Provides PC keybinding support (Default: **F5** for Quick Save, **F9** for Quick Load):
 - Internal cooldown protection (`1.0s`) to prevent rapid key hammering.
@@ -81,7 +76,7 @@ Provides PC keybinding support (Default: **F5** for Quick Save, **F9** for Quick
 
 ---
 
-## 🍞 5. `SaveFeedbackUI`
+## 5. SaveFeedbackUI
 
 A completely autonomous visual notification component. Drop it onto any Canvas UI element or toast banner prefab:
 - **Zero Configuration:** Automatically registers itself to global events on `FuzzySaveManager`.
@@ -91,7 +86,7 @@ A completely autonomous visual notification component. Drop it onto any Canvas U
 
 ---
 
-## 🪢 6. `SaveActionTrigger`
+## 6. SaveActionTrigger
 
 A versatile bridge component exposing parameterless and parameterized public methods ready for connection with:
 - **UnityEvents** (`Button.onClick`, `UnityEvent`)
@@ -116,12 +111,12 @@ public void TriggerCustomEvent(string eventName);
 
 ---
 
-## 👑 7. `FuzzySaveEventTriggerManager`
+## 7. FuzzySaveEventTriggerManager
 
 Automatically instantiated upon scene load via `[RuntimeInitializeOnLoadMethod]`, this persistent `DontDestroyOnLoad` runner monitors global event rules defined in `FuzzySaveSettings.eventRules`.
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [08. Slot Metadata & GPU Thumbnails](/docs/fuzzysave/slot-metadata/) to explore rich slot data cards and zero-stall GPU screenshot capture.

@@ -4,9 +4,7 @@ description: "Chained SaveMigrationManager, safe schema evolution (v1 -> v2 -> v
 slug: docs/fuzzysave/schema-migrations
 ---
 
-# 10. Schema Migrations & Versioning
-
-## 🔄 Overview
+## Overview
 
 As your game evolves through updates, DLCs, and patches, your data models inevitably change:
 - A field is renamed (e.g., `gold` becomes `coins`).
@@ -19,7 +17,7 @@ FuzzySave includes a dedicated **Chained Save Migration Engine** (`SaveMigration
 
 ---
 
-## ⛓️ Chained Migration Architecture
+## Chained Migration Architecture
 
 Every save file records the `saveVersion` under which it was created. When `LoadAsync` is called, FuzzySave checks if the file's version matches `FuzzySaveSettings.currentSaveVersion`.
 
@@ -34,7 +32,7 @@ flowchart LR
 
 ---
 
-## 💻 Registering Migrations
+## Registering Migrations
 
 Register migrations during game startup before any scenes are loaded using Unity's `[RuntimeInitializeOnLoadMethod]`:
 
@@ -93,7 +91,7 @@ public static class GameSaveMigrations
 
 ---
 
-## 🎯 Best Practices for Versioning
+## Best Practices for Versioning
 
 1. **Increment `currentSaveVersion` in `FuzzySaveSettings`:**
    Whenever you make breaking changes to saved variables, increment the version number in your settings asset.
@@ -104,6 +102,6 @@ public static class GameSaveMigrations
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [11. Attributes & Code-First Development](/docs/fuzzysave/attributes/) to explore C# attribute decorators for granular code-first persistence.

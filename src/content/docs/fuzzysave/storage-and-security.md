@@ -4,9 +4,7 @@ description: "Fail-safe atomic file swaps, AES-256 encryption, GZip compression,
 slug: docs/fuzzysave/storage-and-security
 ---
 
-# 03. Storage, Security & Data Integrity
-
-## 🛡️ Introduction
+## Introduction
 
 Player save files are vulnerable to two major risks:
 1. **File Corruption (Hardware/OS Level):** If the device loses power, battery dies, or the application is forcefully terminated while `FileStream` is actively writing, the save file can be truncated to 0 bytes or left in a corrupt, unreadable state.
@@ -16,7 +14,7 @@ FuzzySave incorporates industrial-grade storage safeguards, cryptography, and co
 
 ---
 
-## ⚡ Fail-Safe Atomic File I/O Pipeline
+## Fail-Safe Atomic File I/O Pipeline
 
 FuzzySave never writes directly to the primary save file. Instead, it utilizes a 3-step **Atomic Staged Write** protocol:
 
@@ -37,15 +35,12 @@ flowchart TD
 
 ---
 
-> [!TIP]
-> **IMAGE PLACEHOLDER: ENCRYPTED FILE COMPARISON**
-> ![Plain JSON vs AES-256 Encrypted Save Comparison](/images/fuzzysave/encrypted_vs_plain_comparison.png)
-> *Recommended Resolution: 1200x600 | Format: PNG*
-> *Caption: Side-by-side view showing a plain text JSON file vs an AES-256 encrypted + GZip compressed FuzzySave payload opened in a hex editor.*
+![Plain JSON vs AES-256 Encrypted Save Comparison](/images/fuzzysave/encrypted_vs_plain_comparison.png)
+*Side-by-side view showing a plain text JSON file vs an AES-256 encrypted + GZip compressed FuzzySave payload opened in a hex editor.*
 
 ---
 
-## 🔐 Cryptography & Anti-Cheat
+## Cryptography & Anti-Cheat
 
 ### 1. AES-256-CBC Encryption (`EncryptionHandler`)
 - **Algorithm:** Advanced Encryption Standard (AES) with a 256-bit key in Cipher Block Chaining (CBC) mode.
@@ -76,7 +71,7 @@ public static byte[] DeriveKey(string password, byte[] salt)
 
 ---
 
-## 🗜️ Byte-Level GZip Compression (`CompressionHandler`)
+## Byte-Level GZip Compression (`CompressionHandler`)
 
 Uncompressed JSON files in large games can easily reach **10MB to 50MB+**, consuming substantial disk space and generating high network payloads during cloud sync.
 
@@ -86,7 +81,7 @@ Uncompressed JSON files in large games can easily reach **10MB to 50MB+**, consu
 
 ---
 
-## 📄 Serialization Formats
+## Serialization Formats
 
 FuzzySave supports multiple serialization formats configured via `FuzzySaveSettings.defaultFormat`:
 
@@ -97,7 +92,7 @@ FuzzySave supports multiple serialization formats configured via `FuzzySaveSetti
 
 ---
 
-## 🧩 Advanced Type & Reference Converters
+## Advanced Type & Reference Converters
 
 Standard serializers fail when serializing Unity-specific types (such as `GameObject`, `Component`, or `ScriptableObject`) due to circular references and missing parameterless constructors. FuzzySave implements custom JSON converters:
 
@@ -111,6 +106,6 @@ Standard serializers fail when serializing Unity-specific types (such as `GameOb
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [04. Visual Save Studio](/docs/fuzzysave/visual-save-studio/) to tour the UI Toolkit editor suite, drag-and-drop mapping, and the live Save Explorer.

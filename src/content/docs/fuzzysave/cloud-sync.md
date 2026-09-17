@@ -4,9 +4,7 @@ description: "CloudSyncManager, conflict resolution policies, UGS Cloud Save, St
 slug: docs/fuzzysave/cloud-sync
 ---
 
-# 09. Cloud Synchronization
-
-## ☁️ Overview
+## Overview
 
 In cross-platform and live-service gaming, players expect their progress to sync across devices (e.g., PC Steam, mobile devices, and consoles).
 
@@ -14,15 +12,12 @@ FuzzySave features a provider-agnostic **Cloud Synchronization Architecture** th
 
 ---
 
-> [!TIP]
-> **IMAGE PLACEHOLDER: CLOUD SYNC ARCHITECTURE DIAGRAM**
-> ![Cloud Synchronization Workflow](/images/fuzzysave/cloud_sync_architecture.png)
-> *Recommended Resolution: 1200x600 | Format: PNG*
-> *Caption: Architectural diagram showing local file writes triggering asynchronous uploads through CloudSyncManager to UGS, Steam, PlayFab, Firebase, or Custom REST endpoints.*
+![Cloud Synchronization Workflow](/images/fuzzysave/cloud_sync_architecture.png)
+*Architectural diagram showing local file writes triggering asynchronous uploads through CloudSyncManager to UGS, Steam, PlayFab, Firebase, or Custom REST endpoints.*
 
 ---
 
-## 🏗️ Architecture: `ICloudStorageProvider`
+## Architecture: `ICloudStorageProvider`
 
 All cloud providers implement a unified interface:
 
@@ -47,7 +42,7 @@ public interface ICloudStorageProvider
 
 ---
 
-## ⚖️ Conflict Resolution Policies
+## Conflict Resolution Policies
 
 When a player plays offline on their laptop and then switches to their desktop, local and remote save versions may conflict:
 
@@ -59,7 +54,7 @@ When a player plays offline on their laptop and then switches to their desktop, 
 
 ---
 
-## 🌐 Supported Cloud Providers
+## Supported Cloud Providers
 
 ### 1. Unity Gaming Services (UGS) Cloud Save
 - **Class:** `UGSCloudStorageProvider`
@@ -90,7 +85,7 @@ When a player plays offline on their laptop and then switches to their desktop, 
 
 ---
 
-## 💻 Manual Cloud Sync Code Example
+## Manual Cloud Sync Code Example
 
 While cloud sync triggers automatically after local saves when enabled in `FuzzySaveSettings`, you can also trigger synchronization manually:
 
@@ -123,6 +118,6 @@ public class CloudSaveController : MonoBehaviour
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [10. Schema Migrations & Versioning](/docs/fuzzysave/schema-migrations/) to learn how to update game data structures without breaking older player save files.

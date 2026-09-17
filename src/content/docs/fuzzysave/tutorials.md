@@ -4,9 +4,7 @@ description: "3D interactive demo scene walkthrough, 500+ physics item benchmark
 slug: docs/fuzzysave/tutorials
 ---
 
-# 12. Samples & Stress Benchmark Suite
-
-## 🧪 Overview
+## Overview
 
 FuzzySave ships with two production-ready test scenes:
 1. **Interactive 3D Demo Scene (`DemoScene.unity`):** A polished, stylized third-person environment showcasing player controls, interactive chests, dynamic loot spawning, and UI slot cards.
@@ -14,15 +12,15 @@ FuzzySave ships with two production-ready test scenes:
 
 ---
 
-> [!TIP]
-> **GIF PLACEHOLDER: 3D DEMO SCENE WALKTHROUGH**
+> [!NOTE]
+> **3D Demo Scene Walkthrough**
 > ![FuzzySave 3D Demo Scene](/images/fuzzysave/demo_scene_walkthrough.gif)
-> *Recommended Resolution: 1280x720 | Format: Animated GIF*
+> *Recommended Resolution: 1280x720 | Format: Animated GIF*  
 > *Caption: Controlling the player, opening chests, spawning dynamic crystal loot with L, and testing instant Slot 1/2/3 saves with toast notifications.*
 
 ---
 
-## 🎮 1. Interactive 3D Demo Scene
+## 1. Interactive 3D Demo Scene
 
 Located in: `Assets/FuzzyLogicLabs/FuzzySave/Samples/Demo/DemoScene.unity`
 
@@ -44,15 +42,15 @@ Located in: `Assets/FuzzyLogicLabs/FuzzySave/Samples/Demo/DemoScene.unity`
 
 ---
 
-> [!TIP]
-> **IMAGE PLACEHOLDER: STRESS BENCHMARK HUD**
+> [!NOTE]
+> **Stress Benchmark HUD**
 > ![500+ Objects Stress Benchmark HUD](/images/fuzzysave/stress_benchmark_hud.png)
-> *Recommended Resolution: 1280x720 | Format: PNG*
+> *Recommended Resolution: 1280x720 | Format: PNG*  
 > *Caption: Stress testing FuzzySave with 500 active physics items, 100 roaming agents, and the PerformanceMetricsHUD showing 0.8ms gather time at 60 FPS.*
 
 ---
 
-## ⚡ 2. Performance & Stress Benchmark Arena
+## 2. Performance & Stress Benchmark Arena
 
 Located in: `Assets/FuzzyLogicLabs/FuzzySave/Samples/PerformanceBenchmark/`
 
@@ -70,7 +68,7 @@ The builder automatically:
 
 ---
 
-## 🔬 Benchmark Stress Testing Controls
+## Benchmark Stress Testing Controls
 
 | UI Button | Action Executed | What It Tests |
 |---|---|---|
@@ -83,7 +81,7 @@ The builder automatically:
 
 ---
 
-## 🛡️ The Golden Baseline Audit System
+## The Golden Baseline Audit System
 
 To prove mathematical correctness and data integrity, `StressBenchmarkManager` includes an automated **Golden Baseline Audit**:
 
@@ -102,6 +100,6 @@ OVERALL STATUS: AUDIT PASSED (0 ERRORS DETECTED)
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [13. Complete C# API Reference](/docs/fuzzysave/api-reference/) for the definitive programmatic reference for `FuzzySaveManager`.

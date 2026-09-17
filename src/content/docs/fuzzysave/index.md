@@ -1,25 +1,20 @@
 ---
-title: "Overview & Quick Start"
+title: "FuzzySave Documentation"
 description: "Next-Generation, High-Performance, Zero-Hitch, Fail-Safe Save & Load System for Unity."
 slug: docs/fuzzysave
 ---
-
-# 🎮 FuzzySave Documentation
 
 > **Next-Generation, High-Performance, Zero-Hitch, Fail-Safe Save & Load System for Unity**
 > Engineered by **Fuzzy Logic Labs** | Version 1.0.0 | Compatible with Unity 2022.3 LTS & Unity 6+
 
 ---
 
-> [!TIP]
-> **HERO BANNER / DEMO SHOWCASE GIF:**
-> ![FuzzySave Hero Showcase](/images/fuzzysave/hero_showcase.gif)
-> *Recommended Resolution: 1920x1080 (16:9) | Format: High-Quality GIF / WebM*
-> *Caption: High-level demonstration showcasing Visual Save Studio, 60 FPS asynchronous saving with 500+ physics items, and Play Mode Live Debugger variable injection.*
+![FuzzySave Hero Showcase](/images/fuzzysave/hero_showcase.gif)
+*High-level demonstration showcasing Visual Save Studio, 60 FPS asynchronous saving with 500+ physics items, and Play Mode Live Debugger variable injection.*
 
 ---
 
-## 📖 Welcome to FuzzySave
+## Welcome to FuzzySave
 
 **FuzzySave** is an enterprise-grade serialization, persistence, and game state management framework engineered specifically for Unity. It solves the chronic issues found in conventional Unity save systems—such as main-thread lag spikes, corrupted save files, tedious manual boilerplate coding, lack of security, and difficult schema updates.
 
@@ -27,7 +22,7 @@ Whether you are building an indie roguelike requiring rapid RAM snapshots, an op
 
 ---
 
-## 📑 Documentation Structure
+## Documentation Structure
 
 The documentation is organized into focused, comprehensive chapters. Navigate through the topics below:
 
@@ -50,7 +45,7 @@ The documentation is organized into focused, comprehensive chapters. Navigate th
 
 ---
 
-## 🚀 Quick Glance: Code-First vs No-Code
+## Quick Glance: Code-First vs No-Code
 
 ### 1. Minimal Code Example
 ```csharp
@@ -96,5 +91,6 @@ public class PlayerProgress : MonoBehaviour
 
 ---
 
-> [!NOTE]
-> All code examples in this documentation are verified against Unity 2022.3 LTS and Unity 6.
+:::note
+All code examples in this documentation are verified against Unity 2022.3 LTS and Unity 6.
+:::

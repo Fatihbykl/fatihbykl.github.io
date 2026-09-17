@@ -4,9 +4,7 @@ description: "SaveGuid, duplicate detection, DynamicSpawnTracker, runtime prefab
 slug: docs/fuzzysave/scene-tracking
 ---
 
-# 06. Tracking Engine, Dynamic Spawns & Graveyard
-
-## 📍 Overview
+## Overview
 
 Saving a game involves more than just storing isolated variables; it requires preserving the spatial state and existence of game entities:
 1. **Static Scene Objects:** Objects placed in the scene at build time (e.g., doors, chests, levers).
@@ -17,7 +15,7 @@ FuzzySave handles all three scenarios with zero runtime boilerplate.
 
 ---
 
-## 🏷️ 1. Static Scene Entities: `SaveGuid`
+## 1. Static Scene Entities: `SaveGuid`
 
 The `SaveGuid` component should be attached to any GameObject in your scene hierarchy whose transform, physics, or active state must be persisted.
 
@@ -48,7 +46,7 @@ public class TreasureChest : MonoBehaviour
 
 ---
 
-## 💥 2. Dynamic Runtime Spawns: `DynamicSpawnTracker`
+## 2. Dynamic Runtime Spawns: `DynamicSpawnTracker`
 
 Objects spawned at runtime (such as projectiles, floating crystals, or summoned monsters) do not exist in the scene hierarchy when the scene starts. 
 
@@ -71,7 +69,7 @@ Player spawns loot ➔ DynamicSpawnTracker assigns Instance GUID
 
 ---
 
-## 🪦 3. The Graveyard Registry (Destruction Tracking)
+## 3. The Graveyard Registry (Destruction Tracking)
 
 ### The Problem:
 If a player opens and destroys a treasure chest in the scene and then saves, reloading the scene will cause Unity to instantiate the default scene hierarchy—bringing the destroyed chest back from the dead!
@@ -103,7 +101,7 @@ Configurable via `SaveGuid.GraveyardAction` or `FuzzySaveSettings.defaultGraveya
 
 ---
 
-## 🧱 4. Zero-Allocation DTO Architecture
+## 4. Zero-Allocation DTO Architecture
 
 Serializing native Unity classes directly creates reference loops and heavy GC garbage. FuzzySave uses stack-allocated DTO (Data Transfer Object) structs:
 
@@ -136,12 +134,12 @@ if (agent != null) agent.enabled = true;
 
 ---
 
-## 🔄 5. CodeRewriter Tool
+## 5. CodeRewriter Tool
 
 Found in `Editor/CodeMod/CodeRewriter.cs`, the `CodeRewriter` is an editor utility that uses regular expressions to convert standard Unity math types in your C# scripts to FuzzySave DTOs (and vice-versa) with a single click, ensuring compile-time type safety for custom serialization pipelines.
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [07. No-Code Runtime Components](/docs/fuzzysave/nocode-components/) to explore the ready-to-use checkpoint zones, rolling autosave managers, and UI bindings.

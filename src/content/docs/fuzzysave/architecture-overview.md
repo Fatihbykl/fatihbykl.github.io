@@ -4,9 +4,7 @@ description: "Design principles, .asmdef modular structure, dependency installer
 slug: docs/fuzzysave/architecture-overview
 ---
 
-# 01. Architecture & Core Philosophy
-
-## 🌟 Introduction
+## Introduction
 
 In modern game development, persistence systems are frequently implemented as an afterthought—often relying on Unity's built-in `PlayerPrefs`, simplistic JSON string serialization, or bulky third-party tools that execute all I/O operations directly on the Unity main thread.
 
@@ -19,7 +17,7 @@ In modern game development, persistence systems are frequently implemented as an
 
 ---
 
-## 📦 Package & Assembly Definition (`.asmdef`) Structure
+## Package & Assembly Definition (`.asmdef`) Structure
 
 To ensure lightning-fast compilation times, minimal assembly bloat, and strict dependency boundaries, FuzzySave is separated into modular assembly definitions:
 
@@ -55,15 +53,12 @@ graph TD
 
 ---
 
-## 🛠️ Automated Dependency Installer
+## Automated Dependency Installer
 
 FuzzySave depends on the official high-performance `com.unity.nuget.newtonsoft-json` package. To eliminate manual Package Manager configuration, FuzzySave includes a self-healing dependency installer.
 
-> [!TIP]
-> **IMAGE PLACEHOLDER: DEPENDENCY INSTALLER WINDOW**
-> ![FuzzySave Setup & Dependency Window](/images/fuzzysave/dependency_installer_window.png)
-> *Recommended Resolution: 800x500 | Format: PNG*
-> *Caption: FuzzySave Setup Window automatically prompting the user when Newtonsoft.Json is missing.*
+![FuzzySave Setup & Dependency Window](/images/fuzzysave/dependency_installer_window.png)
+*FuzzySave Setup Window automatically prompting the user when Newtonsoft.Json is missing.*
 
 ### How It Works:
 1. **Background Inspection (`[InitializeOnLoad]`):**
@@ -79,7 +74,7 @@ FuzzySave depends on the official high-performance `com.unity.nuget.newtonsoft-j
 
 ---
 
-## ⚡ Zero-Reflection vs Traditional Reflection
+## Zero-Reflection vs Traditional Reflection
 
 Traditional Unity save tools rely heavily on `System.Reflection` at runtime: inspecting type hierarchies, looping over fields, and calling `FieldInfo.GetValue` / `SetValue`. On mobile devices and consoles (IL2CPP / AOT), reflection incurs substantial garbage collection (GC) allocation, CPU cache misses, and frame stutters.
 
@@ -91,6 +86,6 @@ FuzzySave offers two high-efficiency alternatives:
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [02. Asynchronous Pipeline & Zero-Hitch](/docs/fuzzysave/async-pipeline/) to understand how the 3-phase execution pipeline ensures 60/120 FPS performance during high-throughput saving.

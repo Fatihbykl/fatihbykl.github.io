@@ -1,10 +1,14 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
+import mermaid from 'astro-mermaid';
 
 export default defineConfig({
   site: 'https://fatihbykl.github.io',
   integrations: [
+    mermaid({
+      autoTheme: true,
+    }),
     starlight({
       title: 'Fuzzy Logic Labs — Docs',
       social: {

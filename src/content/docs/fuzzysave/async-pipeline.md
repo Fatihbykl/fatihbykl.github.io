@@ -4,9 +4,7 @@ description: "3-Phase async pipeline, worker threads, time-sliced restoration, a
 slug: docs/fuzzysave/async-pipeline
 ---
 
-# 02. Asynchronous Pipeline & Zero-Hitch Architecture
-
-## 🚀 The Core Problem: Why Conventional Systems Stutter
+## The Core Problem: Why Conventional Systems Stutter
 
 Unity's rendering loop is bound to the **Main Thread**. In standard implementations, calling `Save()` performs the following on the main thread:
 1. Crawling game objects and reflection reading.
@@ -17,11 +15,11 @@ Unity's rendering loop is bound to the **Main Thread**. In standard implementati
 
 If the save payload is larger than a few kilobytes, the main thread freezes for **20ms to 250ms+**, causing a noticeable dropped frame (lag spike / hitch).
 
-FuzzySave eliminates this with its **3-Phase Asynchronous Boru Hattı (Pipeline)**.
+FuzzySave eliminates this with its **3-Phase Asynchronous Pipeline**.
 
 ---
 
-## 🔄 The 3-Phase Pipeline Architecture
+## The 3-Phase Pipeline Architecture
 
 ```mermaid
 sequenceDiagram
@@ -57,15 +55,12 @@ sequenceDiagram
 
 ---
 
-> [!TIP]
-> **GIF PLACEHOLDER: 60 FPS PROFILER COMPARISON**
-> ![Unity Profiler 60 FPS Async Save](/images/fuzzysave/profiler_async_save.gif)
-> *Recommended Resolution: 1280x720 | Format: Animated GIF*
-> *Caption: Unity Profiler demonstrating zero frame drops during a background write of 1,000+ entities with encryption enabled.*
+![Unity Profiler 60 FPS Async Save](/images/fuzzysave/profiler_async_save.gif)
+*Unity Profiler demonstrating zero frame drops during a background write of 1,000+ entities with encryption enabled.*
 
 ---
 
-## ⏱️ Phase Breakdown
+## Phase Breakdown
 
 ### Phase 1: Main Thread Gathering (~0.1ms – 1.0ms)
 Because Unity's C++ native bindings (`Transform`, `GameObject`, `Component`, `SceneManager`) can only be touched from the main thread, Phase 1 strictly gathers data and maps it into thread-safe Plain Old C# Objects (POCOs) and DTOs:
@@ -89,7 +84,7 @@ Once local disk operations conclude:
 
 ---
 
-## 🍰 Time-Sliced Restoration (Zero-Hitch Loading)
+## Time-Sliced Restoration (Zero-Hitch Loading)
 
 Loading thousands of objects within a single frame can cause an even worse freeze than saving. FuzzySave resolves this using an adaptive **Time-Sliced Restoration Engine**:
 
@@ -138,7 +133,7 @@ if (s_CurrentContainer.dynamicSpawns != null && s_CurrentContainer.dynamicSpawns
 
 ---
 
-## 🌐 Cross-Scene Restoration
+## Cross-Scene Restoration
 
 When loading a save slot created in a different scene, FuzzySave handles scene transitions seamlessly:
 
@@ -160,7 +155,7 @@ If `container.sceneName != activeScene.name`, FuzzySave:
 
 ---
 
-## 📊 Live Performance Profiling Metrics
+## Live Performance Profiling Metrics
 
 FuzzySave exposes real-time profiling metrics directly on `FuzzySaveManager`:
 
@@ -174,6 +169,6 @@ Debug.Log($"Main Thread Gathering: {mainThreadMs:F2} ms | Background Worker I/O:
 
 ---
 
-## 🧭 Next Chapter
+## Next Chapter
 
 Proceed to [03. Storage, Security & Data Integrity](/docs/fuzzysave/storage-and-security/) to explore atomic file operations, AES-256 encryption, GZip compression, and HMAC-SHA256 checksums.

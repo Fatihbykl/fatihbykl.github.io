@@ -4,9 +4,7 @@ description: "Feature comparison matrix, mobile storage considerations, common i
 slug: docs/fuzzysave/best-practices
 ---
 
-# 14. Troubleshooting & FAQ
-
-## 📊 Comprehensive Comparison Table
+## Comprehensive Comparison Table
 
 | Capability / Feature | Unity `PlayerPrefs` | Standard `JsonUtility` | Generic Save Assets | **FuzzySave** |
 |---|---|---|---|---|
@@ -25,7 +23,7 @@ slug: docs/fuzzysave/best-practices
 
 ---
 
-## 📱 Mobile Platform Considerations (iOS & Android)
+## Mobile Platform Considerations (iOS & Android)
 
 ### 1. Storage Directories
 FuzzySave defaults to storing data in:
@@ -39,7 +37,7 @@ Apple's App Store Review Guidelines reject applications that place large tempora
 
 ---
 
-## 🛠️ Troubleshooting Common Issues
+## Troubleshooting Common Issues
 
 ### 1. "Duplicate GUID detected! Click 'Regenerate Unique GUID' to resolve"
 - **Cause:** A GameObject containing `SaveGuid` was duplicated in the scene hierarchy or copy-pasted across prefabs.
@@ -67,7 +65,7 @@ Apple's App Store Review Guidelines reject applications that place large tempora
 
 ---
 
-## ❓ Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ)
 
 #### Q: Does FuzzySave work with IL2CPP and AOT compilation?
 **Yes.** All DTO structures, JSON converters, and baked accessors are specifically written to avoid unconstrained reflection and code stripping issues on IL2CPP platforms (Consoles, iOS, WebGL).
@@ -84,7 +82,7 @@ Or in the editor, navigate to **`Tools > FuzzySave > Visual Save Studio > Save S
 
 ---
 
-## 🏁 Conclusion
+## Conclusion
 
 FuzzySave brings enterprise-level reliability, zero-hitch asynchronous performance, and elegant no-code workflows to your Unity game. 
 
