@@ -55,8 +55,7 @@ sequenceDiagram
 
 ---
 
-![Unity Profiler 60 FPS Async Save](/images/fuzzysave/profiler_async_save.gif)
-*Unity Profiler demonstrating zero frame drops during a background write of 1,000+ entities with encryption enabled.*
+![Unity Profiler 60 FPS Async Save](/images/fuzzysave/async_save.png)
 
 ---
 

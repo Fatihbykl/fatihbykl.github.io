@@ -57,9 +57,6 @@ graph TD
 
 FuzzySave depends on the official high-performance `com.unity.nuget.newtonsoft-json` package. To eliminate manual Package Manager configuration, FuzzySave includes a self-healing dependency installer.
 
-![FuzzySave Setup & Dependency Window](/images/fuzzysave/dependency_installer_window.png)
-*FuzzySave Setup Window automatically prompting the user when Newtonsoft.Json is missing.*
-
 ### How It Works:
 1. **Background Inspection (`[InitializeOnLoad]`):**
    When the Unity Editor launches or assets are imported, `FuzzySaveDependencyInstaller` scans `manifest.json` and Unity's `PackageCache`.
@@ -69,8 +66,8 @@ FuzzySave depends on the official high-performance `com.unity.nuget.newtonsoft-j
    Clicking **"Install Newtonsoft Json Automatically"** calls Unity's `UnityEditor.PackageManager.Client.Add("com.unity.nuget.newtonsoft-json@3.2.1")`, displaying an animated progress bar and auto-compiling once complete.
 
 ### Manual Menu Access:
-- **`Tools > FuzzySave > Setup & Dependencies...`**
-- **`Tools > FuzzySave > Install Newtonsoft.Json Dependency`**
+- **`Window > Fuzzy Logic Labs > FuzzySave > Setup & Dependencies...`**
+- **`Window > Fuzzy Logic Labs > FuzzySave > Install Newtonsoft.Json Dependency`**
 
 ---
 

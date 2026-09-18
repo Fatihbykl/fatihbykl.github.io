@@ -9,39 +9,13 @@ slug: docs/fuzzysave/visual-save-studio
 **Visual Save Studio** is FuzzySave's flagship editor environment built entirely with Unity's modern **UI Toolkit** and **UI Builder**. It provides a comprehensive, visual command center to configure persistence, inspect live disk files, bind event triggers, and generate high-performance C# code without writing boilerplate.
 
 Open the studio via the Unity menu:
-**`Tools > FuzzySave > Visual Save Studio`**
-
----
-
-![Visual Save Studio Drag and Drop](/images/fuzzysave/vss_drag_and_drop.gif)
-*Dragging variables from the Auto-Discovery tree directly into a Save Group card, followed by clicking Bake Code.*
-
----
-
-## Studio Layout Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│  FUZZY SAVE — VISUAL SAVE STUDIO                                            │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ [Dashboard]   [Save Events]   [Save Slots]   [Save Explorer]   [Settings]   │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ LEFT PANEL: Discovery Tree    │ CENTER PANEL: Save Groups  │ RIGHT: Group & │
-│ 🔍 Search Scripts & Types     │ 📁 PlayerStatsGroup        │ ⚙️ Group       │
-│ [User Scripts|Engine|SaveMap] │   ├── player_hp   [Alias]  │    Settings    │
-│ 📂 Target Folder: /Scripts    │   ├── player_gold [Alias]  │ 📄 Live C#     │
-│ [x] Primitives  [x] Custom    │   └── player_pos  [Alias]  │    Preview     │
-│ ----------------------------- │ -------------------------- │ -------------- │
-│ ▼ DemoPlayerController        │ [+ Create New Group]       │ [ BAKE CODE ]  │
-│   ├── moveSpeed               │                            │                │
-│   ├── currentHP [DRAG] ───►   │                            │                │
-│   └── gold      [DRAG] ───►   │                            │                │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+**`Window > Fuzzy Logic Labs > FuzzySave > Visual Save Studio`**
 
 ---
 
 ## 1. Dashboard Tab: Visual Mapping & Code Baking
+
+![Visual Save Studio Drag and Drop](/images/fuzzysave/vss.png)
 
 The **Dashboard** tab is the heart of no-code configuration:
 
@@ -78,12 +52,9 @@ This eliminates reflection entirely at runtime, delivering native C# speed.
 
 ---
 
-![Save Explorer Live JSON Editor](/images/fuzzysave/save_explorer_tree_edit.gif)
-*Exploring save files in Tree Mode, editing values in real time, inspecting RGBA color swatches, and saving changes back to disk.*
-
----
-
 ## 2. Save Explorer Tab: Real-Time Disk File Editor
+
+![Save Explorer Live JSON Editor](/images/fuzzysave/save_explorer.png)
 
 The **Save Explorer** allows developers and QA testers to inspect, search, and edit disk save files directly inside Unity without needing an external text editor.
 

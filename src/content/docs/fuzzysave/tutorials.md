@@ -12,14 +12,6 @@ FuzzySave ships with two production-ready test scenes:
 
 ---
 
-> [!NOTE]
-> **3D Demo Scene Walkthrough**
-> ![FuzzySave 3D Demo Scene](/images/fuzzysave/demo_scene_walkthrough.gif)
-> *Recommended Resolution: 1280x720 | Format: Animated GIF*  
-> *Caption: Controlling the player, opening chests, spawning dynamic crystal loot with L, and testing instant Slot 1/2/3 saves with toast notifications.*
-
----
-
 ## 1. Interactive 3D Demo Scene
 
 Located in: `Assets/FuzzyLogicLabs/FuzzySave/Samples/Demo/DemoScene.unity`
@@ -42,13 +34,6 @@ Located in: `Assets/FuzzyLogicLabs/FuzzySave/Samples/Demo/DemoScene.unity`
 
 ---
 
-> [!NOTE]
-> **Stress Benchmark HUD**
-> ![500+ Objects Stress Benchmark HUD](/images/fuzzysave/stress_benchmark_hud.png)
-> *Recommended Resolution: 1280x720 | Format: PNG*  
-> *Caption: Stress testing FuzzySave with 500 active physics items, 100 roaming agents, and the PerformanceMetricsHUD showing 0.8ms gather time at 60 FPS.*
-
----
 
 ## 2. Performance & Stress Benchmark Arena
 

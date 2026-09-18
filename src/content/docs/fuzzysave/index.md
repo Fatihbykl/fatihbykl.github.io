@@ -9,8 +9,7 @@ slug: docs/fuzzysave
 
 ---
 
-![FuzzySave Hero Showcase](/images/fuzzysave/hero_showcase.gif)
-*High-level demonstration showcasing Visual Save Studio, 60 FPS asynchronous saving with 500+ physics items, and Play Mode Live Debugger variable injection.*
+![FuzzySave Hero Showcase](/images/fuzzysave/hero_showcase.png)
 
 ---
 

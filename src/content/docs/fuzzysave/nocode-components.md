@@ -10,8 +10,7 @@ FuzzySave includes a rich suite of plug-and-play MonoBehaviour components design
 
 ---
 
-![SaveTriggerZone with SaveFeedbackUI Toast](/images/fuzzysave/triggerzone_toast_feedback.gif)
-*Player entering a green SaveTriggerZone checkpoint, prompting the SaveFeedbackUI spinner and toast notification.*
+![SaveTriggerZone with SaveFeedbackUI Toast](/images/fuzzysave/checkpoint.png)
 
 ---
 

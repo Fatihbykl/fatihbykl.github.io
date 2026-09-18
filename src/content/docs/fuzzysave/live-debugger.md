@@ -13,38 +13,7 @@ Open the debugger via the Unity menu:
 
 ---
 
-![Play Mode Live Debugger Injection](/images/fuzzysave/live_debugger_injection.gif)
-*Changing player_hp to 9999 and clicking Inject in the Live Debugger to instantly alter health in the running game without pausing.*
-
----
-
-## Debugger Interface Layout
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│ FUZZY SAVE — PLAY MODE LIVE DEBUGGER      ● LIVE (ONLINE)   │
-├─────────────────────────────────────────────────────────────┤
-│ Slot: [slot_1 ▼]  [💾 Save]  [📂 Load]  [🗑️ Delete] [+ New]   │
-│ Snapshot ID: [boss_checkpoint] [📸 Take Snapshot] [⏪ Restore]│
-├─────────────────────────────────────────────────────────────┤
-│ ▼ In-Memory Variables (Live Variables - 18 Items)           │
-│   🔍 [Filter variables...]                                  │
-│   player_hp       [int]    [ 100 ] [Inject]                 │
-│   player_gold     [int]    [ 250 ] [Inject]                 │
-│   player_name     [string] [ Hero] [Inject]                 │
-├─────────────────────────────────────────────────────────────┤
-│ ▼ Tracked Scene GUID Objects (3 Objects)                    │
-│   Chest_Gold   [GUID: 4f8a... ] | Pos: (2.0, 0.0, 5.0) [Ping]│
-│   Checkpoint_1 [GUID: 9c2b... ] | Pos: (0.0, 1.0, 0.0) [Ping]│
-├─────────────────────────────────────────────────────────────┤
-│ ▼ Active Dynamic Spawns (2 Spawns)                          │
-│   DemoLootPrefab [Instance: a91f...]                   [Ping]│
-├─────────────────────────────────────────────────────────────┤
-│ ▼ Graveyard (Destroyed Objects - 1 Tracked)                 │
-│   Destroyed Object: [GUID: 7b3e...]                 [Revive]│
-│   [Clear Graveyard]                                         │
-└─────────────────────────────────────────────────────────────┘
-```
+![Play Mode Live Debugger Injection](/images/fuzzysave/live_debugger.png)
 
 ---
 

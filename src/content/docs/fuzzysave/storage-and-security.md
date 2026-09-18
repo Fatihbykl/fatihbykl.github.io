@@ -35,11 +35,6 @@ flowchart TD
 
 ---
 
-![Plain JSON vs AES-256 Encrypted Save Comparison](/images/fuzzysave/encrypted_vs_plain_comparison.png)
-*Side-by-side view showing a plain text JSON file vs an AES-256 encrypted + GZip compressed FuzzySave payload opened in a hex editor.*
-
----
-
 ## Cryptography & Anti-Cheat
 
 ### 1. AES-256-CBC Encryption (`EncryptionHandler`)

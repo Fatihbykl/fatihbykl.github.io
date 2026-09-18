@@ -16,8 +16,7 @@ FuzzySave provides this out of the box through **Lightweight Companion Metadata*
 
 ---
 
-![Rich Save Slot Card UI](/images/fuzzysave/save_slot_card_preview.png)
-*Modern UI save card displaying the captured gameplay thumbnail, playtime, timestamp, and summary values (Player Level, Gold, Active Quest).*
+![Rich Save Slot Card UI](/images/fuzzysave/slot_card.png)
 
 ---
 

@@ -12,11 +12,6 @@ FuzzySave features a provider-agnostic **Cloud Synchronization Architecture** th
 
 ---
 
-![Cloud Synchronization Workflow](/images/fuzzysave/cloud_sync_architecture.png)
-*Architectural diagram showing local file writes triggering asynchronous uploads through CloudSyncManager to UGS, Steam, PlayFab, Firebase, or Custom REST endpoints.*
-
----
-
 ## Architecture: `ICloudStorageProvider`
 
 All cloud providers implement a unified interface:
