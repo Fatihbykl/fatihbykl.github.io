@@ -268,8 +268,72 @@ export default defineConfig({
               link: '/docs/fuzzytypo/',
             },
             {
-              label: 'C# API Reference',
-              link: '/docs/fuzzytypo/api-reference/',
+              label: 'Getting Started & Architecture',
+              items: [
+                {
+                  label: '01. Introduction & Setup',
+                  link: '/docs/fuzzytypo/introduction-and-setup/',
+                },
+                {
+                  label: '02. Core Concepts & Architecture',
+                  link: '/docs/fuzzytypo/core-concepts-and-architecture/',
+                },
+                {
+                  label: '03. FuzzyTypoLinker Component',
+                  link: '/docs/fuzzytypo/fuzzytypo-linker/',
+                },
+              ],
+            },
+            {
+              label: 'Master Dashboard Suite',
+              items: [
+                {
+                  label: '04. Tokens Studio',
+                  link: '/docs/fuzzytypo/master-dashboard-tokens-studio/',
+                },
+                {
+                  label: '05. Scene Governance',
+                  link: '/docs/fuzzytypo/master-dashboard-scene-governance/',
+                },
+                {
+                  label: '06. Health & Auto-Fix Studio',
+                  link: '/docs/fuzzytypo/health-and-autofix-studio/',
+                },
+                {
+                  label: '07. Insights & Analytics Studio',
+                  link: '/docs/fuzzytypo/insights-and-analytics/',
+                },
+                {
+                  label: '08. Settings & Pro Features',
+                  link: '/docs/fuzzytypo/settings-and-pro-features/',
+                },
+              ],
+            },
+            {
+              label: 'Advanced Systems & Localization',
+              items: [
+                {
+                  label: '09. Multilingual & Localization',
+                  link: '/docs/fuzzytypo/localization-and-multilingual/',
+                },
+                {
+                  label: '10. Standalone Editor Tools',
+                  link: '/docs/fuzzytypo/standalone-tools/',
+                },
+              ],
+            },
+            {
+              label: 'Scripting & Troubleshooting',
+              items: [
+                {
+                  label: '11. Runtime API & Scripting',
+                  link: '/docs/fuzzytypo/runtime-api-and-scripting/',
+                },
+                {
+                  label: '12. FAQ & Troubleshooting',
+                  link: '/docs/fuzzytypo/faq-and-troubleshooting/',
+                },
+              ],
             },
           ],
         },
