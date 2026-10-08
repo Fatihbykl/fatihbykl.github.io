@@ -48,7 +48,7 @@ FuzzyTypoLinker features a custom Inspector built using Unity's modern **UI Tool
 
 ---
 
-## 🎛️ Local Overrides & StyleOverrideFlags
+## Local Overrides & StyleOverrideFlags
 
 Occasionally, a text instance must adhere to central typeface, font sizing, and alignment rules, but require an isolated property override—such as a specific red alert tint or unique character spacing.
 

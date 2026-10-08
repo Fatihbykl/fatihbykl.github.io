@@ -27,7 +27,7 @@ graph TD
         TMPText["TMP_Text (TextMeshProUGUI / 3D)"]
         Manager -->|Events| Linker
         Linker -->|Applies Values| TMPText
-        Theme -.->|O(1) Token Lookup| Manager
+        Theme -.->|"O(1) Token Lookup"| Manager
     end
 
     subgraph EditorLayer["3. Editor Layer (UI Toolkit)"]
